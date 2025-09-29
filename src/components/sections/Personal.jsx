@@ -171,10 +171,10 @@ const Personal = ({ personalInfo }) => {
             {/* Call to Action */}
             <div className="mt-12 flex justify-center lg:justify-start">
               <a
-                href="#experience"
+                href="#education"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-full text-white font-semibold transition-all duration-300 hover:scale-105 shadow-xl border border-white/20"
               >
-                View My Experience
+                View My Education
                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                 </svg>
