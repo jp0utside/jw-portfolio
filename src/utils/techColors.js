@@ -4,68 +4,101 @@ export const getTechColor = (tech) => {
   
   // Frontend Technologies
   if (techLower.includes('react') || techLower.includes('vue') || techLower.includes('angular') || 
-      techLower.includes('svelte') || techLower.includes('next') || techLower.includes('nuxt')) {
-    return 'from-blue-500 to-cyan-500';
+      techLower.includes('svelte') || techLower.includes('next') || techLower.includes('nuxt') ||
+      techLower.includes('html5') || techLower.includes('css3') || techLower.includes('tailwind') ||
+      techLower.includes('bootstrap') || techLower.includes('sass') || techLower.includes('scss') ||
+      techLower.includes('styled') || techLower.includes('emotion') || techLower.includes('chakra') ||
+      techLower.includes('mui') || techLower.includes('antd') || techLower.includes('responsive design') ||
+      techLower.includes('frontend development') || techLower.includes('ui/ux design') || 
+      techLower.includes('backend development') || techLower.includes('api development')) {
+    return 'from-yellow-500 to-orange-500';
   }
   
   // Backend Technologies
-  if (techLower.includes('node') || techLower.includes('express') || techLower.includes('python') || 
-      techLower.includes('django') || techLower.includes('flask') || techLower.includes('fastapi') ||
-      techLower.includes('spring') || techLower.includes('java') || techLower.includes('php') ||
-      techLower.includes('laravel') || techLower.includes('ruby') || techLower.includes('rails')) {
-    return 'from-green-500 to-emerald-500';
+  if (techLower.includes('node') || techLower.includes('express') || techLower.includes('fastapi') || 
+      techLower.includes('django') || techLower.includes('flask') || techLower.includes('spring') || 
+      techLower.includes('laravel') || techLower.includes('ruby') || techLower.includes('rails') ||
+      techLower.includes('codeigniter') || techLower.includes('restful') || techLower.includes('api') ||
+      techLower.includes('microservices') || techLower.includes('graphql') || techLower.includes('grpc') ||
+      techLower.includes('go')) {
+    return 'from-blue-500 to-cyan-500';
   }
   
-  // Databases
+  // Machine Learning & AI
+  if (techLower.includes('pytorch') || techLower.includes('tensorflow') || techLower.includes('scikit') || 
+      techLower.includes('pandas') || techLower.includes('numpy') || techLower.includes('deep learning') ||
+      techLower.includes('reinforcement learning') || techLower.includes('machine learning') ||
+      techLower.includes('neural network') || techLower.includes('opencv') || techLower.includes('keras') ||
+      techLower.includes('model selection') || techLower.includes('feature engineering') ||
+      techLower.includes('model training') || techLower.includes('performance evaluation') ||
+      techLower.includes('lstm')) {
+    return 'from-indigo-500 to-purple-500';
+  }
+  
+  // Data Management
   if (techLower.includes('postgresql') || techLower.includes('mysql') || techLower.includes('mongodb') || 
       techLower.includes('redis') || techLower.includes('sqlite') || techLower.includes('mariadb') ||
-      techLower.includes('oracle') || techLower.includes('sql') || techLower.includes('prisma') ||
-      techLower.includes('sequelize') || techLower.includes('mongoose')) {
-    return 'from-purple-500 to-violet-500';
-  }
-  
-  // Cloud & DevOps
-  if (techLower.includes('aws') || techLower.includes('azure') || techLower.includes('gcp') || 
-      techLower.includes('docker') || techLower.includes('kubernetes') || techLower.includes('jenkins') ||
-      techLower.includes('terraform') || techLower.includes('ansible') || techLower.includes('git') ||
-      techLower.includes('github') || techLower.includes('gitlab') || techLower.includes('ci/cd')) {
-    return 'from-orange-500 to-red-500';
-  }
-  
-  // Styling & UI
-  if (techLower.includes('css') || techLower.includes('tailwind') || techLower.includes('bootstrap') || 
-      techLower.includes('sass') || techLower.includes('scss') || techLower.includes('styled') ||
-      techLower.includes('emotion') || techLower.includes('chakra') || techLower.includes('mui') ||
-      techLower.includes('antd') || techLower.includes('figma') || techLower.includes('sketch')) {
+      techLower.includes('oracle') || techLower.includes('database design') || techLower.includes('data analysis') ||
+      techLower.includes('prisma') || techLower.includes('sequelize') || techLower.includes('mongoose') ||
+      techLower.includes('dynamodb') || techLower.includes('cassandra') || techLower.includes('neo4j') ||
+      techLower.includes('database management') || techLower.includes('data visualization')) {
     return 'from-pink-500 to-rose-500';
   }
   
-  // JavaScript & TypeScript
-  if (techLower.includes('javascript') || techLower.includes('typescript') || techLower.includes('js') || 
-      techLower.includes('ts') || techLower.includes('es6') || techLower.includes('babel') ||
-      techLower.includes('webpack') || techLower.includes('vite') || techLower.includes('parcel')) {
-    return 'from-yellow-500 to-orange-500';
+  // Cloud & Tools
+  if (techLower.includes('aws') || techLower.includes('azure') || techLower.includes('gcp') || 
+      techLower.includes('docker') || techLower.includes('kubernetes') || techLower.includes('jenkins') ||
+      techLower.includes('terraform') || techLower.includes('ansible') || techLower.includes('ci/cd') ||
+      techLower.includes('heroku') || techLower.includes('vercel') || techLower.includes('netlify') ||
+      techLower.includes('amazon s3') || techLower.includes('ec2') || techLower.includes('lambda') ||
+      techLower.includes('github') || techLower.includes('git')) {
+    return 'from-orange-500 to-red-500';
+  }
+  
+  // Programming Languages
+  if (techLower.includes('python') || techLower.includes('javascript') || techLower.includes('java') || 
+      techLower.includes('c++') || techLower.includes('sql') || techLower.includes('html') || 
+      techLower.includes('css') || techLower.includes('php') || techLower.includes('matlab') ||
+      techLower.includes('typescript') || techLower.includes('ruby') ||
+      techLower.includes('swift') || techLower.includes('kotlin') || techLower.includes('rust')) {
+    return 'from-emerald-500 to-green-500';
+  }
+  
+  // Theory & Algorithms
+  if (techLower.includes('data structures') || techLower.includes('algorithmic analysis') ||
+      techLower.includes('technical research') || techLower.includes('algorithms') ||
+      techLower.includes('complexity analysis') || techLower.includes('computational theory')) {
+    return 'from-blue-500 to-emerald-500';
   }
   
   // Testing
   if (techLower.includes('jest') || techLower.includes('testing') || techLower.includes('cypress') || 
       techLower.includes('playwright') || techLower.includes('enzyme') || techLower.includes('mocha') ||
-      techLower.includes('chai') || techLower.includes('karma') || techLower.includes('jasmine')) {
-    return 'from-indigo-500 to-purple-500';
+      techLower.includes('chai') || techLower.includes('karma') || techLower.includes('jasmine') ||
+      techLower.includes('selenium') || techLower.includes('pytest') || techLower.includes('unittest')) {
+    return 'from-teal-500 to-cyan-500';
+  }
+  
+  // Design & Prototyping
+  if (techLower.includes('figma') || techLower.includes('sketch') || techLower.includes('adobe') ||
+      techLower.includes('invision') || techLower.includes('zeplin') || techLower.includes('principle') ||
+      techLower.includes('framer') || techLower.includes('protopie')) {
+    return 'from-rose-500 to-pink-500';
+  }
+  
+  // Build Tools
+  if (techLower.includes('webpack') || techLower.includes('vite') || techLower.includes('parcel') ||
+      techLower.includes('babel') || techLower.includes('eslint') || techLower.includes('prettier') ||
+      techLower.includes('rollup') || techLower.includes('gulp') || techLower.includes('grunt')) {
+    return 'from-gray-500 to-gray-600';
   }
   
   // Mobile & Desktop
   if (techLower.includes('react native') || techLower.includes('flutter') || techLower.includes('ionic') || 
       techLower.includes('electron') || techLower.includes('cordova') || techLower.includes('xamarin') ||
-      techLower.includes('swift') || techLower.includes('kotlin') || techLower.includes('android')) {
-    return 'from-teal-500 to-cyan-500';
-  }
-  
-  // Payment & External Services
-  if (techLower.includes('stripe') || techLower.includes('paypal') || techLower.includes('square') || 
-      techLower.includes('twilio') || techLower.includes('sendgrid') || techLower.includes('firebase') ||
-      techLower.includes('auth0') || techLower.includes('oauth') || techLower.includes('jwt')) {
-    return 'from-emerald-500 to-green-500';
+      techLower.includes('swift') || techLower.includes('kotlin') || techLower.includes('android') ||
+      techLower.includes('ios') || techLower.includes('xcode')) {
+    return 'from-yellow-500 to-orange-500';
   }
   
   // Default color for unmatched technologies
@@ -75,17 +108,127 @@ export const getTechColor = (tech) => {
 export const getTechIcon = (tech) => {
   const techLower = tech.toLowerCase();
   
-  // You can expand this with more specific icons if needed
+  // Programming Languages
+  if (techLower.includes('python')) return '🐍';
+  if (techLower.includes('javascript')) return '📜';
+  if (techLower.includes('java')) return '☕';
+  if (techLower.includes('c++')) return '⚡';
+  if (techLower.includes('sql')) return '🗄️';
+  if (techLower.includes('html')) return '🌐';
+  if (techLower.includes('css')) return '🎨';
+  if (techLower.includes('php')) return '🐘';
+  if (techLower.includes('matlab')) return '📊';
+  if (techLower.includes('go')) return '🐹';
+  
+  // Frontend
   if (techLower.includes('react')) return '⚛️';
   if (techLower.includes('vue')) return '💚';
   if (techLower.includes('angular')) return '🅰️';
+  if (techLower.includes('html5')) return '🌐';
+  if (techLower.includes('frontend development')) return '🎨';
+  if (techLower.includes('ui/ux design')) return '✏️';
+  
+  // Backend
   if (techLower.includes('node')) return '🟢';
-  if (techLower.includes('python')) return '🐍';
-  if (techLower.includes('javascript') || techLower.includes('typescript')) return '📜';
-  if (techLower.includes('css') || techLower.includes('tailwind')) return '🎨';
+  if (techLower.includes('fastapi')) return '🚀';
+  if (techLower.includes('restful') || techLower.includes('api') || techLower.includes('api development')) return '🔌';
+  if (techLower.includes('microservices')) return '🏗️';
+  if (techLower.includes('codeigniter')) return '🔥';
+  if (techLower.includes('backend development')) return '⚙️';
+  
+  // Machine Learning
+  if (techLower.includes('pytorch')) return '🔥';
+  if (techLower.includes('scikit')) return '🤖';
+  if (techLower.includes('pandas')) return '🐼';
+  if (techLower.includes('numpy')) return '🔢';
+  if (techLower.includes('deep learning')) return '🧠';
+  if (techLower.includes('reinforcement learning')) return '🎯';
+  if (techLower.includes('model selection')) return '🎯';
+  if (techLower.includes('feature engineering')) return '⚙️';
+  if (techLower.includes('model training')) return '🏋️';
+  if (techLower.includes('performance evaluation')) return '📊';
+  if (techLower.includes('performance evlauation')) return '📊';
+  
+  // Data Management
+  if (techLower.includes('postgresql')) return '🐘';
+  if (techLower.includes('mysql')) return '🐬';
+  if (techLower.includes('sqlite')) return '💾';
+  if (techLower.includes('database design')) return '🏗️';
+  if (techLower.includes('data analysis')) return '📈';
+  if (techLower.includes('database management')) return '🗄️';
+  if (techLower.includes('data visualization')) return '📊';
+  
+  // Cloud & Tools
   if (techLower.includes('aws')) return '☁️';
+  if (techLower.includes('amazon s3')) return '🪣';
+  if (techLower.includes('heroku')) return '🟣';
   if (techLower.includes('docker')) return '🐳';
+  if (techLower.includes('github')) return '📚';
   if (techLower.includes('git')) return '📚';
   
+  // Theory
+  if (techLower.includes('data structures')) return '🏗️';
+  if (techLower.includes('algorithmic analysis')) return '🧮';
+  if (techLower.includes('technical research')) return '🔬';
+  
+  // Testing
+  if (techLower.includes('jest')) return '🧪';
+  if (techLower.includes('cypress')) return '🌲';
+  if (techLower.includes('playwright')) return '🎭';
+  if (techLower.includes('testing')) return '✅';
+  
+  // Design
+  if (techLower.includes('figma')) return '🎨';
+  if (techLower.includes('sketch')) return '✏️';
+  if (techLower.includes('adobe')) return '🎯';
+  
+  // Build Tools
+  if (techLower.includes('webpack')) return '📦';
+  if (techLower.includes('vite')) return '⚡';
+  if (techLower.includes('babel')) return '🔄';
+  if (techLower.includes('eslint')) return '🔍';
+  
+  // Mobile
+  if (techLower.includes('react native')) return '📱';
+  if (techLower.includes('flutter')) return '🦋';
+  if (techLower.includes('ios')) return '🍎';
+  if (techLower.includes('android')) return '🤖';
+  
   return '💻'; // Default icon
+};
+
+// Color mapping for skill categories
+export const getCategoryColor = (category) => {
+  const categoryColors = {
+    'Programming Languages': 'from-emerald-500 to-green-500',
+    'Frontend': 'from-yellow-500 to-orange-500',
+    'Backend': 'from-blue-500 to-cyan-500',
+    'Machine Learning': 'from-indigo-500 to-purple-500',
+    'Machine Learning/AI': 'from-indigo-500 to-purple-500',
+    'Data Management': 'from-pink-500 to-rose-500',
+    'Cloud & Tools': 'from-orange-500 to-red-500',
+    'Web': 'from-yellow-500 to-orange-500',
+    'Data': 'from-pink-500 to-rose-500',
+    'Theory': 'from-blue-500 to-emerald-500'
+  };
+  
+  return categoryColors[category] || 'from-gray-500 to-gray-600';
+};
+
+// Icon mapping for skill categories
+export const getCategoryIcon = (category) => {
+  const categoryIcons = {
+    'Programming Languages': '📜',
+    'Frontend': '🎨',
+    'Backend': '⚙️',
+    'Machine Learning': '🤖',
+    'Machine Learning/AI': '🤖',
+    'Data Management': '🗄️',
+    'Cloud & Tools': '☁️',
+    'Web': '🌐',
+    'Data': '📊',
+    'Theory': '🧮'
+  };
+  
+  return categoryIcons[category] || '💻';
 };
