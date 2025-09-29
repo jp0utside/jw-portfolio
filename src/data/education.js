@@ -7,7 +7,7 @@ export const education = [
     startDate: "2023",
     endDate: "Jan 2025",
     gpa: null,
-    specialization: "Machine Learning, Computer Networking",
+    specialization: "Machine Learning, Computer Networking, Cybersecurity",
     coursework: ["Machine Learning", "Computer Networking", "Advanced Algorithms", "Research Methods"],
     achievements: ["M.S. Capstone Project: S-BLE Seat Position Classifier"],
     type: "graduate"

@@ -2,11 +2,24 @@ export const projects = [
   {
     id: 1,
     title: "S-BLE Seat Position Classifier",
-    description: "M.S. Capstone Project developing a multi-class ML classification system to predict bus passenger seat positions using Bluetooth Low Energy beacon data.",
-    longDescription: "A comprehensive machine learning project focusing on accessibility technology. Developed robust code for data parsing, visualization, feature engineering, and model training. Implemented multiple model architectures including Random Forests and Deep Neural Networks, achieving 72.3% accuracy using LSTM networks - a 101.1% improvement over baseline.",
+    description: "A multi-class ML classification system to predict bus passenger seat positions.",
+    longDescription: "This project was completed for my M.S. Capstone Project under Prof. Roberto Manduchi at UC Santa Cruz using the SBLE (Shuttle Bluetooth Low Energy) dataset. While a classifier of this sort could have many use cases, the primary one was to empower assistive technologies for differently abled individuals to expand the use of shuttle busses for all people. This dataset was collected by student volunteers riding shuttle busses equipped with two Bluetooth Low Energy beacons fixed to the front and back of different campus shuttle busses. Volunteers' mobile devices collected continuous RSSI readings from each beacon along with native device data while using a mobile interface to manually indicate when shuttle trips began, ended, and where they were seated. The resulting dataset showed a high degree of noise, and thus any classifier capable of determining where passengers were seated would need to be similarly complex. I developed a robust codebase to process the data in a way that I could use to build the classifier, including code for data parsing, visualization, feature engineering, and model training. I trained & tested several different types of machine learning classification models to perform this classification task, including Random Forest classifiers and several different Neural Network based models. Ultimately, I found a Long Short-Term Memory Network (LSTM) was best suited for this task, as its ability to make classifications based on dependencies over long periods of time proved it most useful in this context, obtaining an accuracy score of 72.3% — more than doubling the 35.93% accuracy of the baseline random classifier. Building this project helped further my knowledge of machine learning algorithms and deepen my insight into the theoretical possibilities and practical limitations of such models. While more research certainly needs to be done before systems like this can be effective in practice, the results I obtained certainly show great promise that the necessary improvements are in reach.",
     tech: ["Python", "Pandas", "Scikit-Learn", "PyTorch", "LSTM", "Machine Learning"],
     image: "/images/sble-project.jpg",
-    gallery: ["/images/sble-1.jpg", "/images/sble-2.jpg"],
+    gallery: [
+      {
+        image: "/images/sble-1.png",
+        caption: "Sample trip data collected from the back of a shuttle bus."
+      },
+      {
+        image: "/images/sble-2.png",
+        caption: "Kernel Density Estimation of (Non-Zero) RSSI reading differences across different seat positions."
+      },
+      {
+        image: "/images/sble-3.png",
+        caption: "Kernel Density Estimation of trip accuracy prediction scores by model."
+      }
+    ],
     github: "https://github.com/jp0utside/sble-classifier",
     live: null,
     featured: true,
@@ -20,7 +33,16 @@ export const projects = [
     longDescription: "A comprehensive mobile application built with FastAPI microservices and React Native. Features include direct search capabilities, smart event aggregation, local downloads with progress tracking, and JWT-based authentication. Future development includes streaming capabilities and cross-platform Android support.",
     tech: ["Python", "FastAPI", "React Native", "SQLite", "JWT", "Cursor AI"],
     image: "/images/setscrape-project.jpg",
-    gallery: ["/images/setscrape-1.jpg", "/images/setscrape-2.jpg"],
+    gallery: [
+      {
+        image: "/images/setscrape-1.jpg",
+        caption: "Main search interface with live music discovery features"
+      },
+      {
+        image: "/images/setscrape-2.jpg",
+        caption: "Download progress tracking and local storage management"
+      }
+    ],
     github: "https://github.com/jp0utside/setscrape",
     live: null,
     featured: true,
@@ -30,13 +52,13 @@ export const projects = [
   {
     id: 3,
     title: "Locally Imagined",
-    description: "Full-stack web application designed to facilitate local Santa Cruz art sales, built collaboratively with a team of 5 students.",
-    longDescription: "A comprehensive e-commerce platform for local artists built with React frontend and GO APIs. Leveraged PostgreSQL database hosted on Heroku with Amazon S3 for image storage. Personally oversaw high-level system design, data pipelining, database schema design, and GO endpoint development.",
-    tech: ["React", "Go", "PostgreSQL", "Heroku", "Amazon S3", "Team Collaboration"],
+    description: "A comprehensive e-commerce platform to facilitate local Santa Cruz art sales.",
+    longDescription: "This project was developed with a team of 5 students from UC Santa Cruz, in conjunction with a group of local Santa Cruz artists, for UC Santa Cruz’s Intro to Software Development course. Our team employed a Scrum Agile Development methodology to build this website over the course of a quarter. The website was built using React with Material UI for the frontend, Go for the APIs, a PostgreSQL database hosted on Heroku connected to Amazon S3 for image storage. This website supported user creation and profile customization, uploading and managing art listings, and comprehensive browsing functionality with filtering capabilities. My primary responsibilities included developing API endpoints, designing and implementing database schema, and ensuring the different components were designed and synchronized to achieve the high-level goals of the application.",
+    tech: ["React", "Go", "PostgreSQL", "Heroku", "Amazon S3", "Scrum"],
     image: "/images/locally-imagined.jpg",
-    gallery: ["/images/locally-1.jpg", "/images/locally-2.jpg"],
+    gallery: [],
     github: "https://github.com/jp0utside/locally-imagined",
-    live: "https://locally-imagined.herokuapp.com",
+    live: null,
     featured: true,
     category: "Full Stack",
     year: 2023
@@ -44,12 +66,12 @@ export const projects = [
   {
     id: 4,
     title: "Autonomous Cyber Defense Agent",
-    description: "Collaborative project creating an autonomous cyber defense agent using Reinforcement Learning techniques for the CAGE Challenge 2.",
+    description: "Reinforcement Learning agent built for the CAGE Challenge 2.",
     longDescription: "Developed an autonomous cyber defense system using Proximal Policy Optimization (PPO) algorithm to defend against pre-trained adversarial agents. Focused on fine-tuning hyperparameters to minimize damage while maintaining training constraints, achieving significant improvements in agent performance metrics.",
-    tech: ["Python", "PyTorch", "CybORG", "Reinforcement Learning", "PPO Algorithm"],
+    tech: ["Python", "PyTorch"],
     image: "/images/cyber-defense.jpg",
-    gallery: ["/images/cyber-1.jpg"],
-    github: "https://github.com/jp0utside/cyber-defense-agent",
+    gallery: [],
+    github: null,
     live: null,
     featured: false,
     category: "Machine Learning",
@@ -60,14 +82,13 @@ export const projects = [
     title: "MAC Spoofing Detector",
     description: "MATLAB implementation to test and validate cross-layer device fingerprinting approach for detecting MAC spoofing attacks.",
     longDescription: "Implemented a comprehensive detection system based on PhD research at UC Santa Cruz. Engineered synthetic dataset generator with device-specific RF characteristics, developed signal processing pipeline for EVM feature extraction, and implemented adaptive thresholding algorithms for optimized detection accuracy.",
-    tech: ["MATLAB", "WLAN Toolbox", "RF Blockset", "Signal Processing", "Cybersecurity"],
+    tech: ["MATLAB", "WLAN Toolbox", "RF Blockset", "Signal Processing"],
     image: "/images/mac-spoofing.jpg",
-    gallery: ["/images/mac-1.jpg"],
-    github: "https://github.com/jp0utside/mac-spoofing-detector",
+    gallery: [],
+    github: null,
     live: null,
     featured: false,
     category: "Research",
     year: 2023
   }
 ];
-  
