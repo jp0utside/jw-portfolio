@@ -7,7 +7,7 @@ const Personal = ({ personalInfo }) => {
     <section className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white flex items-center relative overflow-hidden">
       {/* Background Image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-60"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-70"
         style={{
           backgroundImage: 'url("/images/background.jpg")'
         }}
@@ -40,26 +40,17 @@ const Personal = ({ personalInfo }) => {
               </div>
             </div>
             
-            {/* Name and Title under profile image */}
-            <div className="absolute -bottom-20 left-1/2 transform -translate-x-1/2 text-center lg:hidden">
-              <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                {name}
-              </h1>
-              <h2 className="text-2xl font-semibold text-blue-300">
-                {title}
-              </h2>
-            </div>
           </div>
 
           {/* Personal Info */}
           <div className="text-center lg:text-left">
             {/* Name and Title for desktop */}
             <div className="hidden lg:block mb-8">
-              <h1 className="text-6xl lg:text-7xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              <h1 className="text-6xl lg:text-8xl font-bold mb-4 text-gray-300 drop-shadow-2xl">
                 {name}
               </h1>
               
-              <h2 className="text-3xl lg:text-4xl font-semibold text-blue-300">
+              <h2 className="text-3xl lg:text-4xl font-semibold text-gray-300">
                 {title}
               </h2>
             </div>
@@ -78,7 +69,7 @@ const Personal = ({ personalInfo }) => {
             </div>
 
             {/* Contact Information */}
-            <div className="bg-black/30 backdrop-blur-sm rounded-xl p-6 border border-white/20 mb-8">
+            <div className="bg-black/30 backdrop-blur-sm rounded-xl p-6 border border-white/20">
               <h3 className="text-lg font-semibold text-blue-300 mb-4">Contact Information</h3>
               <div className="space-y-3">
                 {email && (
