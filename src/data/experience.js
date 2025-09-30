@@ -58,7 +58,7 @@ export const experience = [
       "Held one-on-one meetings with staff members to understand their existing issues with the software and provide ad-hoc fixes.",
       "Held trainings for new users to introduce them to the software and how it is used in the context of the office."
     ],
-    tech: ["Legal Software", "Training", "User Support", "Process Optimization"],
+    tech: ["Desktop Support", "End-User Tutorials", "Technical Writing", "Detailed Error Logging"],
     logo: "/images/sanmateo-logo.png"
   }
 ];

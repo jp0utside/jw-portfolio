@@ -81,5 +81,19 @@ export const projects = [
     featured: false,
     category: "Research",
     year: 2023
+  },
+  {
+    id: 6,
+    title: "Personal Portfolio Website",
+    description: "A website showcasing my professional experience, projects, and technical skills.",
+    longDescription: "Built a modern, responsive, single-page comprehensive personal portfolio website using React and Vite for optimal performance. Features include an interactive experience section with sidebar navigation, a project gallery with lightbox functionality, a categorized skills section with color-coded technology chips, and an education timeline. The site utilizes TailwindCSS for modern styling, Lucide React for consistent iconography, and includes smooth animations and responsive design principles. Developed using Claude AI for high-level design andCursor AI for efficient development and implementation.",
+    tech: ["React", "Vite", "TailwindCSS", "JavaScript", "Lucide React", "PostCSS", "Cursor AI", "Claude AI"],
+    image: "/images/portfolio-project.jpg",
+    gallery: [],
+    github: "https://github.com/jp0utside/jw-portfolio",
+    live: null,
+    featured: false,
+    category: "Web Development",
+    year: 2024
   }
 ];
