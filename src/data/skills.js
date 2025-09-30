@@ -1,17 +1,18 @@
 export const skills = {
   tools: {
     "Frontend": ["React", "React Native", "Vue.js", "HTML5"],
-    "Backend": ["Node.js", "FastAPI", "Go", "CodeIgniter", "RESTful APIs", "Microservices"],
+    "Backend": ["Node.js", "FastAPI", "CodeIgniter"],
     "Machine Learning": ["PyTorch", "Scikit-Learn", "Pandas", "NumPy", "Deep Learning", "Reinforcement Learning"],
-    "Data Management": ["PostgreSQL", "MySQL", "SQLite", "Database Design", "Data Analysis"],
-    "Programming Languages": ["Python", "JavaScript", "Java", "C++", "SQL", "HTML/CSS", "PHP", "MATLAB"],
+    "Data Management": ["PostgreSQL", "MySQL", "SQLite"],
+    "Programming Languages": ["Python", "JavaScript", "Java", "C++", "Go", "HTML/CSS", "PHP", "MATLAB"],
     "Cloud & Dev Tools": ["AWS", "Amazon S3", "Heroku", "Docker", "GitHub", "Cursor AI", "Claude AI"]
   },
   technicalSkills: {
-    "Web": ["API Development", "UI/UX Design", "Frontend Development", "Backend Development"],
+    "Web": ["Frontend Development", "Backend Development", "API Development", "Microservices","UI/UX Design"],
     "Data": ["Database Management", "Database Design", "Data Visualization", "Data Analysis"],
     "Machine Learning/AI": ["Model Selection", "Feature Engineering", "Model Training & Analysis", "Performance Evaluation"],
-    "Theory": ["Data Structures", "Algorithmic Analysis", "Technical Research & Development", "Network Protocols"]
+    "Theory": ["Data Structures", "Algorithmic Analysis", "Technical Research & Development", "Network Protocols", "Cryptographic Algorithms & Protocols"],
+    "Support & Documentation": ["Desktop Support", "Troubleshooting", "Technical Writing", "End-User Tutorials", "Detailed Error Logging"]
   },
   softSkills: [
     "Clear & Concise Communication",
