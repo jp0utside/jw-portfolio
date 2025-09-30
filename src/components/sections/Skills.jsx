@@ -95,7 +95,7 @@ const Skills = ({ skills }) => {
                         key={index}
                         className="group relative"
                       >
-                        <div className={`px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r ${getTechColor(skill)} text-white shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-default flex items-center gap-2`}>
+                        <div className={`px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r ${getCategoryColor(category)} text-white shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-default flex items-center gap-2`}>
                           <span>{getTechIcon(skill)}</span>
                           <span>{skill}</span>
                         </div>
@@ -128,7 +128,7 @@ const Skills = ({ skills }) => {
                         key={index}
                         className="group relative"
                       >
-                        <div className={`px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r ${getTechColor(skill)} text-white shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-default flex items-center gap-2`}>
+                        <div className={`px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r ${getCategoryColor(category)} text-white shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-default flex items-center gap-2`}>
                           <span>{getTechIcon(skill)}</span>
                           <span>{skill}</span>
                         </div>

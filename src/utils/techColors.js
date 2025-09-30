@@ -1,121 +1,106 @@
 // Technology color mapping for consistent styling across the site
-export const getTechColor = (tech) => {
+import { skills } from '../data/skills';
+
+// Helper function to find which category a technology belongs to
+const findTechnologyCategory = (tech) => {
   const techLower = tech.toLowerCase();
   
-  // Programming Languages (Emerald to Green)
-  if (techLower.includes('python') || techLower.includes('javascript') || techLower.includes('java') || 
-      techLower.includes('c++') || techLower.includes('php') || 
-      techLower.includes('matlab') || techLower.includes('typescript') || techLower.includes('ruby') ||
-      techLower.includes('swift') || techLower.includes('kotlin') || techLower.includes('rust') ||
-      techLower.includes('go') || techLower.includes('html/css') || 
-      techLower.includes('css')) {
-    return 'from-emerald-500 to-green-500';
+  // Check Tools section
+  if (skills.tools) {
+    for (const [category, skillList] of Object.entries(skills.tools)) {
+      if (skillList.some(skill => skill.toLowerCase() === techLower)) {
+        return category;
+      }
+    }
   }
   
-  // Frontend Technologies (Yellow to Orange)
-  if (techLower.includes('react') || techLower.includes('vue') || techLower.includes('angular') || 
-      techLower.includes('svelte') || techLower.includes('next') || techLower.includes('nuxt') ||
-      techLower.includes('html5') || techLower.includes('css3') || techLower.includes('tailwind') ||
-      techLower.includes('bootstrap') || techLower.includes('sass') || techLower.includes('scss') ||
-      techLower.includes('styled') || techLower.includes('emotion') || techLower.includes('chakra') ||
-      techLower.includes('mui') || techLower.includes('antd') || techLower.includes('responsive design') ||
-      techLower.includes('frontend development') || techLower.includes('ui/ux design') ||
-      techLower.includes('react native')) {
-    return 'from-yellow-500 to-orange-500';
+  // Check Technical Skills section
+  if (skills.technicalSkills) {
+    for (const [category, skillList] of Object.entries(skills.technicalSkills)) {
+      if (skillList.some(skill => skill.toLowerCase() === techLower)) {
+        return category;
+      }
+    }
   }
   
-  // Backend Technologies (Blue to Cyan)
-  if (techLower.includes('node') || techLower.includes('express') || techLower.includes('fastapi') || 
-      techLower.includes('django') || techLower.includes('flask') || techLower.includes('spring') || 
-      techLower.includes('laravel') || techLower.includes('rails') || techLower.includes('codeigniter') ||
-      techLower.includes('restful') || techLower.includes('graphql') || techLower.includes('grpc')) {
-    return 'from-blue-500 to-cyan-500';
+  return null; // Technology not found in any category
+};
+
+// Color mapping for skill categories - used by Skills section
+export const getCategoryColor = (category) => {
+  const categoryColors = {
+    // Tools section categories
+    'Programming Languages': 'from-emerald-500 to-green-500',
+    'Frontend': 'from-yellow-500 to-orange-500',
+    'Backend': 'from-blue-500 to-cyan-500',
+    'Machine Learning': 'from-indigo-500 to-purple-500',
+    'Data Management': 'from-pink-500 to-rose-500',
+    'Cloud & Dev Tools': 'from-orange-500 to-red-500',
+    
+    // Technical Skills section categories
+    'Web': 'from-yellow-500 to-orange-500',
+    'Data': 'from-pink-500 to-rose-500',
+    'Machine Learning/AI': 'from-indigo-500 to-purple-500',
+    'Theory': 'from-cyan-500 to-emerald-500',
+    'Support & Documentation': 'from-red-500 to-orange-500'
+  };
+  
+  return categoryColors[category] || 'from-gray-500 to-gray-600';
+};
+
+// Icon mapping for skill categories - used by Skills section
+export const getCategoryIcon = (category) => {
+  const categoryIcons = {
+    // Tools section categories
+    'Programming Languages': '📜',
+    'Frontend': '🎨',
+    'Backend': '⚙️',
+    'Machine Learning': '🤖',
+    'Data Management': '🗄️',
+    'Cloud & Dev Tools': '☁️',
+    
+    // Technical Skills section categories
+    'Web': '🌐',
+    'Data': '📊',
+    'Machine Learning/AI': '🤖',
+    'Theory': '🧮',
+    'Support & Documentation': '📚'
+  };
+  
+  return categoryIcons[category] || '💻';
+};
+
+// Individual technology color mapping - used by Experience and Projects sections
+export const getTechColor = (tech) => {
+  // First, try to find the technology in the skills categories
+  const category = findTechnologyCategory(tech);
+  if (category) {
+    return getCategoryColor(category);
   }
   
-  // Machine Learning & AI (Indigo to Purple)
-  if (techLower.includes('pytorch') || techLower.includes('tensorflow') || techLower.includes('scikit') || 
-      techLower.includes('pandas') || techLower.includes('numpy') || techLower.includes('deep learning') ||
-      techLower.includes('reinforcement learning') || techLower.includes('machine learning') ||
-      techLower.includes('neural network') || techLower.includes('opencv') || techLower.includes('keras') ||
-      techLower.includes('model selection') || techLower.includes('feature engineering') ||
-      techLower.includes('model training') || techLower.includes('performance evaluation') ||
-      techLower.includes('lstm')) {
-    return 'from-indigo-500 to-purple-500';
+  // Fallback: Handle technologies that aren't in skills but appear in experience/projects
+  const techLower = tech.toLowerCase();
+  
+  // Handle special cases that might not be in skills
+  if (techLower.includes('matlab') || techLower.includes('signal processing') || 
+      techLower.includes('wlan toolbox') || techLower.includes('rf blockset')) {
+    return 'from-indigo-500 to-purple-500'; // ML/Research tools
   }
   
-  // Theory & Algorithms (Cyan to Emerald) - Check this BEFORE Data Management to avoid conflicts
-  if (techLower.includes('data structures') || techLower.includes('algorithmic analysis') ||
-      techLower.includes('technical research') || techLower.includes('algorithms') ||
-      techLower.includes('complexity analysis') || techLower.includes('computational theory') ||
-      techLower.includes('network protocols') || techLower.includes('cryptographic algorithms')) {
-    return 'from-cyan-500 to-emerald-500';
+  if (techLower.includes('gradescope') || techLower.includes('scrum') || techLower.includes('jwt') ||
+      techLower.includes('lucide react')) {
+    return 'from-orange-500 to-red-500'; // Tools & Platforms
   }
   
-  // Data Management (Pink to Rose)
-  if (techLower.includes('postgresql') || techLower.includes('mysql') || techLower.includes('mongodb') || 
-      techLower.includes('redis') || techLower.includes('sqlite') || techLower.includes('mariadb') ||
-      techLower.includes('oracle') || techLower.includes('database design') || techLower.includes('data analysis') ||
-      techLower.includes('prisma') || techLower.includes('sequelize') || techLower.includes('mongoose') ||
-      techLower.includes('dynamodb') || techLower.includes('cassandra') || techLower.includes('neo4j') ||
-      techLower.includes('database management') || techLower.includes('data visualization')) {
-    return 'from-pink-500 to-rose-500';
-  }
-  
-  // Cloud & Dev Tools (Orange to Red)
-  if (techLower.includes('aws') || techLower.includes('azure') || techLower.includes('gcp') || 
-      techLower.includes('docker') || techLower.includes('kubernetes') || techLower.includes('jenkins') ||
-      techLower.includes('terraform') || techLower.includes('ansible') || techLower.includes('ci/cd') ||
-      techLower.includes('heroku') || techLower.includes('vercel') || techLower.includes('netlify') ||
-      techLower.includes('amazon s3') || techLower.includes('ec2') || techLower.includes('lambda') ||
-      techLower.includes('github') || techLower.includes('git') || techLower.includes('postcss') || 
-      techLower.includes('claude ai') || techLower.includes('cursor ai')) {
-    return 'from-orange-500 to-red-500';
-  }
-  
-  // Web Development (Yellow to Orange) - for general web technologies
-  if (techLower.includes('webpack') || techLower.includes('vite') || techLower.includes('parcel') ||
-      techLower.includes('babel') || techLower.includes('eslint') || techLower.includes('prettier') ||
-      techLower.includes('rollup') || techLower.includes('gulp') || techLower.includes('grunt') ||
-      techLower.includes('npm') || techLower.includes('yarn') || techLower.includes('pnpm') || 
-      techLower.includes('microservices') || techLower.includes('backend development') ||
-      techLower.includes('api development')) {
-    return 'from-yellow-500 to-orange-500';
-  }
-  
-  // Support & Documentation (Red to Orange)
-  if (techLower.includes('desktop support') || techLower.includes('troubleshooting') ||
-      techLower.includes('technical writing') || techLower.includes('end-user tutorials') ||
-      techLower.includes('detailed error logging') || techLower.includes('support') ||
-      techLower.includes('documentation') || techLower.includes('tutorials')) {
-    return 'from-red-500 to-orange-500';
-  }
-  
-  // Testing (Teal to Cyan)
-  if (techLower.includes('jest') || techLower.includes('testing') || techLower.includes('cypress') || 
-      techLower.includes('playwright') || techLower.includes('enzyme') || techLower.includes('mocha') ||
-      techLower.includes('chai') || techLower.includes('karma') || techLower.includes('jasmine') ||
-      techLower.includes('selenium') || techLower.includes('pytest') || techLower.includes('unittest')) {
-    return 'from-teal-500 to-cyan-500';
-  }
-  
-  // Design & Prototyping (Rose to Pink)
-  if (techLower.includes('figma') || techLower.includes('sketch') || techLower.includes('adobe') ||
-      techLower.includes('invision') || techLower.includes('zeplin') || techLower.includes('principle') ||
-      techLower.includes('framer') || techLower.includes('protopie')) {
-    return 'from-rose-500 to-pink-500';
-  }
-  
-  // Mobile & Desktop (Yellow to Orange)
-  if (techLower.includes('flutter') || techLower.includes('ionic') || techLower.includes('electron') || 
-      techLower.includes('cordova') || techLower.includes('xamarin') || techLower.includes('android') ||
-      techLower.includes('ios') || techLower.includes('xcode')) {
-    return 'from-yellow-500 to-orange-500';
+  if (techLower.includes('teaching')) {
+    return 'from-red-500 to-orange-500'; // Support & Documentation
   }
   
   // Default color for unmatched technologies
   return 'from-gray-500 to-gray-600';
 };
 
+// Individual technology icon mapping - used by all sections
 export const getTechIcon = (tech) => {
   const techLower = tech.toLowerCase();
   
@@ -218,49 +203,16 @@ export const getTechIcon = (tech) => {
   if (techLower.includes('ios')) return '🍎';
   if (techLower.includes('android')) return '🤖';
   
+  // Tools & Platforms
+  if (techLower.includes('gradescope')) return '📊';
+  if (techLower.includes('scrum')) return '🏃';
+  if (techLower.includes('jwt')) return '🔑';
+  if (techLower.includes('signal processing')) return '📡';
+  if (techLower.includes('wlan toolbox')) return '📶';
+  if (techLower.includes('rf blockset')) return '📻';
+  if (techLower.includes('lucide react')) return '🎨';
+  if (techLower.includes('teaching')) return '👨‍🏫';
+  if (techLower.includes('computer science theory')) return '🧮';
+  
   return '💻'; // Default icon
-};
-
-// Color mapping for skill categories - matching exact names from skills.js
-export const getCategoryColor = (category) => {
-  const categoryColors = {
-    // Tools section categories
-    'Programming Languages': 'from-emerald-500 to-green-500',
-    'Frontend': 'from-yellow-500 to-orange-500',
-    'Backend': 'from-blue-500 to-cyan-500',
-    'Machine Learning': 'from-indigo-500 to-purple-500',
-    'Data Management': 'from-pink-500 to-rose-500',
-    'Cloud & Dev Tools': 'from-orange-500 to-red-500',
-    
-    // Technical Skills section categories
-    'Web': 'from-yellow-500 to-orange-500',
-    'Data': 'from-pink-500 to-rose-500',
-    'Machine Learning/AI': 'from-indigo-500 to-purple-500',
-    'Theory': 'from-cyan-500 to-emerald-500',
-    'Support & Documentation': 'from-red-500 to-orange-500'
-  };
-  
-  return categoryColors[category] || 'from-gray-500 to-gray-600';
-};
-
-// Icon mapping for skill categories - matching exact names from skills.js
-export const getCategoryIcon = (category) => {
-  const categoryIcons = {
-    // Tools section categories
-    'Programming Languages': '📜',
-    'Frontend': '🎨',
-    'Backend': '⚙️',
-    'Machine Learning': '🤖',
-    'Data Management': '🗄️',
-    'Cloud & Dev Tools': '☁️',
-    
-    // Technical Skills section categories
-    'Web': '🌐',
-    'Data': '📊',
-    'Machine Learning/AI': '🤖',
-    'Theory': '🧮',
-    'Support & Documentation': '📚'
-  };
-  
-  return categoryIcons[category] || '💻';
 };
