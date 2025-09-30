@@ -51,7 +51,7 @@ export const getTechColor = (tech) => {
       techLower.includes('terraform') || techLower.includes('ansible') || techLower.includes('ci/cd') ||
       techLower.includes('heroku') || techLower.includes('vercel') || techLower.includes('netlify') ||
       techLower.includes('amazon s3') || techLower.includes('ec2') || techLower.includes('lambda') ||
-      techLower.includes('github') || techLower.includes('git')) {
+      techLower.includes('github') || techLower.includes('git') || techLower.includes('cursor ai') || techLower.includes('claude ai')) {
     return 'from-orange-500 to-red-500';
   }
   
@@ -67,7 +67,7 @@ export const getTechColor = (tech) => {
   // Theory & Algorithms
   if (techLower.includes('data structures') || techLower.includes('algorithmic analysis') ||
       techLower.includes('technical research') || techLower.includes('algorithms') ||
-      techLower.includes('complexity analysis') || techLower.includes('computational theory')) {
+      techLower.includes('complexity analysis') || techLower.includes('computational theory') || techLower.includes('network protocols')) {
     return 'from-blue-500 to-emerald-500';
   }
   
@@ -206,7 +206,7 @@ export const getCategoryColor = (category) => {
     'Machine Learning': 'from-indigo-500 to-purple-500',
     'Machine Learning/AI': 'from-indigo-500 to-purple-500',
     'Data Management': 'from-pink-500 to-rose-500',
-    'Cloud & Tools': 'from-orange-500 to-red-500',
+    'Cloud & Dev Tools': 'from-orange-500 to-red-500',
     'Web': 'from-yellow-500 to-orange-500',
     'Data': 'from-pink-500 to-rose-500',
     'Theory': 'from-blue-500 to-emerald-500'

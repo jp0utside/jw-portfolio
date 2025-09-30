@@ -4,7 +4,7 @@ export const projects = [
     title: "S-BLE Seat Position Classifier",
     description: "A multi-class ML classification system to predict bus passenger seat positions.",
     longDescription: "This project was completed for my M.S. Capstone Project under Prof. Roberto Manduchi at UC Santa Cruz using the SBLE (Shuttle Bluetooth Low Energy) dataset. While a classifier of this sort could have many use cases, the primary one was to empower assistive technologies for differently abled individuals to expand the use of shuttle busses for all people. This dataset was collected by student volunteers riding shuttle busses equipped with two Bluetooth Low Energy beacons fixed to the front and back of different campus shuttle busses. Volunteers' mobile devices collected continuous RSSI readings from each beacon along with native device data while using a mobile interface to manually indicate when shuttle trips began, ended, and where they were seated. The resulting dataset showed a high degree of noise, and thus any classifier capable of determining where passengers were seated would need to be similarly complex. I developed a robust codebase to process the data in a way that I could use to build the classifier, including code for data parsing, visualization, feature engineering, and model training. I trained & tested several different types of machine learning classification models to perform this classification task, including Random Forest classifiers and several different Neural Network based models. Ultimately, I found a Long Short-Term Memory Network (LSTM) was best suited for this task, as its ability to make classifications based on dependencies over long periods of time proved it most useful in this context, obtaining an accuracy score of 72.3% — more than doubling the 35.93% accuracy of the baseline random classifier. Building this project helped further my knowledge of machine learning algorithms and deepen my insight into the theoretical possibilities and practical limitations of such models. While more research certainly needs to be done before systems like this can be effective in practice, the results I obtained certainly show great promise that the necessary improvements are in reach.",
-    tech: ["Python", "Pandas", "Scikit-Learn", "PyTorch", "LSTM", "Machine Learning"],
+    tech: ["Python", "Pandas", "Scikit-Learn", "PyTorch", "Machine Learning", "Data Visualization"],
     image: "/images/sble-project.jpg",
     gallery: [
       {
@@ -20,7 +20,7 @@ export const projects = [
         caption: "Kernel Density Estimation of trip accuracy prediction scores by model."
       }
     ],
-    github: "https://github.com/jp0utside/sble-classifier",
+    github: "https://github.com/jp0utside/SBLE_project",
     live: null,
     featured: true,
     category: "Machine Learning",
@@ -29,23 +29,14 @@ export const projects = [
   {
     id: 2,
     title: "SetScrape",
-    description: "Full-stack mobile application for easy browsing and downloading of live music from Internet Archive, developed using Cursor AI.",
-    longDescription: "A comprehensive mobile application built with FastAPI microservices and React Native. Features include direct search capabilities, smart event aggregation, local downloads with progress tracking, and JWT-based authentication. Future development includes streaming capabilities and cross-platform Android support.",
+    description: "Full-stack mobile application for easy browsing and downloading of live music from Internet Archive.",
+    longDescription: "A comprehensive mobile application built with FastAPI microservices and React Native, with Cursor AI for development. Features include direct search capabilities, smart event aggregation, local downloads with progress tracking, and JWT-based authentication. Future development includes streaming capabilities and cross-platform Android support.",
     tech: ["Python", "FastAPI", "React Native", "SQLite", "JWT", "Cursor AI"],
     image: "/images/setscrape-project.jpg",
-    gallery: [
-      {
-        image: "/images/setscrape-1.jpg",
-        caption: "Main search interface with live music discovery features"
-      },
-      {
-        image: "/images/setscrape-2.jpg",
-        caption: "Download progress tracking and local storage management"
-      }
-    ],
-    github: "https://github.com/jp0utside/setscrape",
+    gallery: [],
+    github: "https://github.com/jp0utside/SetScrape",
     live: null,
-    featured: true,
+    featured: false,
     category: "Full Stack",
     year: 2024
   },
@@ -57,9 +48,9 @@ export const projects = [
     tech: ["React", "Go", "PostgreSQL", "Heroku", "Amazon S3", "Scrum"],
     image: "/images/locally-imagined.jpg",
     gallery: [],
-    github: "https://github.com/jp0utside/locally-imagined",
+    github: "https://github.com/locally-imagined",
     live: null,
-    featured: true,
+    featured: false,
     category: "Full Stack",
     year: 2023
   },

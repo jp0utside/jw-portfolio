@@ -1,8 +1,8 @@
 export const personalInfo = {
     name: "Jake Warsaw",
     title: "M.S. in Computer Science & Engineering",
-    tagline: "Building digital experiences that make a difference",
-    bio: "I'm a passionate full-stack developer with over 5 years of experience building scalable web applications. I love creating intuitive user experiences and solving complex technical challenges. When I'm not coding, you can find me exploring new technologies, contributing to open source projects, or hiking in the mountains.",
+    tagline: "Making Computers Work For You",
+    bio: "I'm a passionate developer who always codes with the end user in mind. I love building services that make a difference in people's lives, whether that means developing new ideas, innovating on existing ones, or simply making sure the people using them are getting the most out of them. I've spent the last 5 years exploring all areas of computer science, from machine learning to cybersecurity to web development, and I'm always looking for new challenges and opportunities to grow. When I'm not coding, you can find me hiking, skiing, playing guitar or listening to music.",
     location: "Menlo Park, CA",
     email: "jacobpwarsaw@gmail.com",
     phone: "+1 (650) 388-8386", // Optional
