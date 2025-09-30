@@ -6,12 +6,12 @@ const Education = ({ education }) => {
 
   if (!education || education.length === 0) {
     return (
-      <section id="education" className="py-20 bg-white">
+      <section id="education" className="py-20 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-6">
-          <h2 className="text-5xl lg:text-6xl font-bold text-center mb-16 text-gray-800">
+          <h2 className="text-5xl lg:text-6xl font-bold text-center mb-16 text-gray-800 dark:text-white">
             Education
           </h2>
-          <p className="text-center text-gray-600">No education data available.</p>
+          <p className="text-center text-gray-600 dark:text-gray-400">No education data available.</p>
         </div>
       </section>
     );
@@ -28,9 +28,9 @@ const Education = ({ education }) => {
   };
 
   return (
-    <section id="education" className="py-20 bg-white">
+    <section id="education" className="py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-6">
-        <h2 className="text-5xl lg:text-6xl font-bold text-center mb-16 text-gray-800">
+        <h2 className="text-5xl lg:text-6xl font-bold text-center mb-16 text-gray-800 dark:text-white">
           Education
         </h2>
         
@@ -39,7 +39,7 @@ const Education = ({ education }) => {
             {/* Sidebar Navigation */}
             <div className="w-full lg:w-80 flex-shrink-0">
               <div className="sticky top-8">
-                <h3 className="text-2xl font-semibold mb-6 text-gray-700">Degrees</h3>
+                <h3 className="text-2xl font-semibold mb-6 text-gray-700 dark:text-gray-300">Degrees</h3>
                 <nav className="space-y-2">
                   {education.map((edu, index) => (
                     <button
@@ -48,7 +48,7 @@ const Education = ({ education }) => {
                       className={`w-full text-left p-4 rounded-lg transition-all duration-300 group ${
                         selectedEducation === index
                           ? 'bg-purple-600 text-white shadow-lg'
-                          : 'bg-gray-50 text-gray-700 hover:bg-purple-50 hover:text-purple-600 border border-gray-200'
+                          : 'bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900/20 hover:text-purple-600 dark:hover:text-purple-400 border border-gray-200 dark:border-gray-700'
                       }`}
                     >
                       <div className="flex items-center justify-between">
@@ -81,7 +81,7 @@ const Education = ({ education }) => {
 
             {/* Main Content */}
             <div className="flex-1 min-w-0">
-              <div className="bg-gray-50 rounded-xl shadow-lg p-8 min-h-[600px]">
+              <div className="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-lg p-8 min-h-[600px]">
                 {education[selectedEducation] && (
                   <div className="animate-fade-in">
                     {/* Degree Header */}
@@ -90,17 +90,17 @@ const Education = ({ education }) => {
                         <div className="flex items-center mb-4">
                           <span className="text-4xl mr-3">{getDegreeIcon(education[selectedEducation].type)}</span>
                           <div>
-                            <h3 className="text-3xl font-bold text-gray-800 mb-2">
+                            <h3 className="text-3xl font-bold text-gray-800 dark:text-white mb-2">
                               {education[selectedEducation].degree}
                             </h3>
                             {education[selectedEducation].minor && (
-                              <p className="text-lg text-purple-600 font-medium">
+                              <p className="text-lg text-purple-600 dark:text-purple-400 font-medium">
                                 Minor: {education[selectedEducation].minor}
                               </p>
                             )}
                           </div>
                         </div>
-                        <div className="flex items-center text-xl text-purple-600 font-semibold mb-4">
+                        <div className="flex items-center text-xl text-purple-600 dark:text-purple-400 font-semibold mb-4">
                           <GraduationCap className="w-6 h-6 mr-2" />
                           {education[selectedEducation].school}
                         </div>
@@ -108,7 +108,7 @@ const Education = ({ education }) => {
                     </div>
 
                     {/* Location and Duration */}
-                    <div className="flex flex-wrap items-center gap-6 mb-6 text-gray-600">
+                    <div className="flex flex-wrap items-center gap-6 mb-6 text-gray-600 dark:text-gray-400">
                       <div className="flex items-center">
                         <MapPin className="w-4 h-4 mr-2" />
                         <span>{education[selectedEducation].location}</span>
@@ -130,12 +130,12 @@ const Education = ({ education }) => {
                     {/* Specialization */}
                     {education[selectedEducation].specialization && (
                       <div className="mb-6">
-                        <h4 className="text-lg font-semibold text-gray-800 mb-3">Specialization</h4>
+                        <h4 className="text-lg font-semibold text-gray-800 dark:text-white mb-3">Specialization</h4>
                         <div className="flex flex-wrap gap-2">
                           {education[selectedEducation].specialization.split(', ').map((spec, index) => (
                             <span
                               key={index}
-                              className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium"
+                              className="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 rounded-full text-sm font-medium"
                             >
                               {spec}
                             </span>
@@ -147,7 +147,7 @@ const Education = ({ education }) => {
                     {/* Coursework */}
                     {education[selectedEducation].coursework && education[selectedEducation].coursework.length > 0 && (
                       <div className="mb-6">
-                        <h4 className="text-lg font-semibold text-gray-800 mb-3 flex items-center">
+                        <h4 className="text-lg font-semibold text-gray-800 dark:text-white mb-3 flex items-center">
                           <BookOpen className="w-5 h-5 mr-2" />
                           Relevant Coursework
                         </h4>
@@ -155,10 +155,10 @@ const Education = ({ education }) => {
                           {education[selectedEducation].coursework.map((course, index) => (
                             <div
                               key={index}
-                              className="flex items-center p-3 bg-white rounded-lg border border-gray-200"
+                              className="flex items-center p-3 bg-white dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600"
                             >
                               <div className="w-2 h-2 bg-purple-500 rounded-full mr-3 flex-shrink-0"></div>
-                              <span className="text-gray-700">{course}</span>
+                              <span className="text-gray-700 dark:text-gray-300">{course}</span>
                             </div>
                           ))}
                         </div>
@@ -168,7 +168,7 @@ const Education = ({ education }) => {
                     {/* Achievements */}
                     {education[selectedEducation].achievements && education[selectedEducation].achievements.length > 0 && (
                       <div>
-                        <h4 className="text-lg font-semibold text-gray-800 mb-3 flex items-center">
+                        <h4 className="text-lg font-semibold text-gray-800 dark:text-white mb-3 flex items-center">
                           <Award className="w-5 h-5 mr-2" />
                           Achievements & Honors
                         </h4>
@@ -176,7 +176,7 @@ const Education = ({ education }) => {
                           {education[selectedEducation].achievements.map((achievement, index) => (
                             <li key={index} className="flex items-start">
                               <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                              <span className="text-gray-700 leading-relaxed">{achievement}</span>
+                              <span className="text-gray-700 dark:text-gray-300 leading-relaxed">{achievement}</span>
                             </li>
                           ))}
                         </ul>

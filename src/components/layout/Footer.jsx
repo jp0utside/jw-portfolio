@@ -11,7 +11,7 @@ const Footer = ({ personalInfo }) => {
   };
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-900 dark:bg-gray-950 text-white">
       <div className="container mx-auto px-6 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Personal Info */}
@@ -100,7 +100,7 @@ const Footer = ({ personalInfo }) => {
                   href={social.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+                  className="w-10 h-10 bg-gray-800 dark:bg-gray-700 hover:bg-blue-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
                   aria-label="GitHub"
                 >
                   <Github className="w-5 h-5" />
@@ -112,7 +112,7 @@ const Footer = ({ personalInfo }) => {
                   href={social.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+                  className="w-10 h-10 bg-gray-800 dark:bg-gray-700 hover:bg-blue-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
                   aria-label="LinkedIn"
                 >
                   <Linkedin className="w-5 h-5" />
@@ -124,7 +124,7 @@ const Footer = ({ personalInfo }) => {
                   href={social.twitter}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+                  className="w-10 h-10 bg-gray-800 dark:bg-gray-700 hover:bg-blue-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
                   aria-label="Twitter"
                 >
                   <Twitter className="w-5 h-5" />
@@ -136,7 +136,7 @@ const Footer = ({ personalInfo }) => {
                   href={social.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+                  className="w-10 h-10 bg-gray-800 dark:bg-gray-700 hover:bg-blue-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
                   aria-label="Website"
                 >
                   <Globe className="w-5 h-5" />
@@ -147,7 +147,7 @@ const Footer = ({ personalInfo }) => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-gray-800 dark:border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
             © {new Date().getFullYear()} {name || 'Jake Wilson'}. All rights reserved.
           </p>

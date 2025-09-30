@@ -7,12 +7,12 @@ const Skills = ({ skills }) => {
 
   if (!skills) {
     return (
-      <section id="skills" className="py-20 bg-gray-50">
+      <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-6">
-          <h2 className="text-5xl lg:text-6xl font-bold text-center mb-16 text-gray-800">
+          <h2 className="text-5xl lg:text-6xl font-bold text-center mb-16 text-gray-800 dark:text-white">
             Skills & Expertise
           </h2>
-          <p className="text-center text-gray-600">No skills data available.</p>
+          <p className="text-center text-gray-600 dark:text-gray-400">No skills data available.</p>
         </div>
       </section>
     );
@@ -49,9 +49,9 @@ const Skills = ({ skills }) => {
   };
 
   return (
-    <section id="skills" className="py-20 bg-gray-50">
+    <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="container mx-auto px-6">
-        <h2 className="text-5xl lg:text-6xl font-bold text-center mb-16 text-gray-800">
+        <h2 className="text-5xl lg:text-6xl font-bold text-center mb-16 text-gray-800 dark:text-white">
           Skills & Expertise
         </h2>
         
@@ -67,7 +67,7 @@ const Skills = ({ skills }) => {
                   className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center ${
                     activeCategory === tab.id
                       ? `${getTabColor(tab.id)} text-white shadow-lg`
-                      : `bg-white text-gray-700 border border-gray-200 ${getTabHoverColor(tab.id)}`
+                      : `bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-600 ${getTabHoverColor(tab.id)}`
                   }`}
                 >
                   <IconComponent className="w-5 h-5 mr-2" />
@@ -81,12 +81,12 @@ const Skills = ({ skills }) => {
           {activeCategory === 'tools' && (
             <div className="grid md:grid-cols-2 gap-8">
               {Object.entries(skills.tools || {}).map(([category, skillList]) => (
-                <div key={category} className="bg-white rounded-xl shadow-lg p-8">
+                <div key={category} className="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-8">
                   <div className="flex items-center mb-6">
                     <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${getCategoryColor(category)} flex items-center justify-center text-white mr-4`}>
                       <span className="text-xl">{getCategoryIcon(category)}</span>
                     </div>
-                    <h3 className="text-3xl font-bold text-gray-800">{category}</h3>
+                    <h3 className="text-3xl font-bold text-gray-800 dark:text-white">{category}</h3>
                   </div>
                   
                   <div className="flex flex-wrap gap-3">
@@ -114,12 +114,12 @@ const Skills = ({ skills }) => {
           {activeCategory === 'technicalSkills' && (
             <div className="grid md:grid-cols-2 gap-8">
               {Object.entries(skills.technicalSkills || {}).map(([category, skillList]) => (
-                <div key={category} className="bg-white rounded-xl shadow-lg p-8">
+                <div key={category} className="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-8">
                   <div className="flex items-center mb-6">
                     <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${getCategoryColor(category)} flex items-center justify-center text-white mr-4`}>
                       <span className="text-xl">{getCategoryIcon(category)}</span>
                     </div>
-                    <h3 className="text-3xl font-bold text-gray-800">{category}</h3>
+                    <h3 className="text-3xl font-bold text-gray-800 dark:text-white">{category}</h3>
                   </div>
                   
                   <div className="flex flex-wrap gap-3">
@@ -146,12 +146,12 @@ const Skills = ({ skills }) => {
           {/* Soft Skills */}
           {activeCategory === 'softSkills' && (
             <div className="max-w-4xl mx-auto">
-              <div className="bg-white rounded-xl shadow-lg p-8">
+              <div className="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-8">
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-violet-500 flex items-center justify-center text-white mr-4">
                     <Users className="w-6 h-6" />
                   </div>
-                  <h3 className="text-3xl font-bold text-gray-800">Soft Skills</h3>
+                  <h3 className="text-3xl font-bold text-gray-800 dark:text-white">Soft Skills</h3>
                 </div>
                 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -160,7 +160,7 @@ const Skills = ({ skills }) => {
                       key={index}
                       className="group relative"
                     >
-                      <div className="px-6 py-4 rounded-lg text-gray-700 font-medium bg-gradient-to-r from-purple-100 to-violet-100 hover:from-purple-200 hover:to-violet-200 transition-all duration-300 hover:scale-105 cursor-default border border-purple-200">
+                      <div className="px-6 py-4 rounded-lg text-gray-700 dark:text-gray-300 font-medium bg-gradient-to-r from-purple-100 dark:from-purple-900/30 to-violet-100 dark:to-violet-900/30 hover:from-purple-200 dark:hover:from-purple-800/40 hover:to-violet-200 dark:hover:to-violet-800/40 transition-all duration-300 hover:scale-105 cursor-default border border-purple-200 dark:border-purple-700">
                         {skill}
                       </div>
                     </div>
@@ -173,34 +173,34 @@ const Skills = ({ skills }) => {
           {/* Certifications */}
           {activeCategory === 'certifications' && (
             <div className="max-w-4xl mx-auto">
-              <div className="bg-white rounded-xl shadow-lg p-8">
+              <div className="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-8">
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-yellow-500 to-orange-500 flex items-center justify-center text-white mr-4">
                     <Award className="w-6 h-6" />
                   </div>
-                  <h3 className="text-3xl font-bold text-gray-800">Certifications</h3>
+                  <h3 className="text-3xl font-bold text-gray-800 dark:text-white">Certifications</h3>
                 </div>
                 
                 <div className="space-y-6">
                   {skills.certifications.map((cert, index) => (
                     <div
                       key={index}
-                      className="flex items-center justify-between p-6 rounded-lg bg-gradient-to-r from-yellow-50 to-orange-50 border border-yellow-200 hover:shadow-md transition-shadow duration-300"
+                      className="flex items-center justify-between p-6 rounded-lg bg-gradient-to-r from-yellow-50 dark:from-yellow-900/20 to-orange-50 dark:to-orange-900/20 border border-yellow-200 dark:border-yellow-700 hover:shadow-md transition-shadow duration-300"
                     >
                       <div className="flex items-center">
                         <div className="w-10 h-10 rounded-full bg-gradient-to-r from-yellow-500 to-orange-500 flex items-center justify-center text-white mr-4">
                           <Award className="w-5 h-5" />
                         </div>
                         <div>
-                          <h4 className="font-semibold text-gray-800">{cert.name}</h4>
-                          <p className="text-sm text-gray-600">{cert.issuer}</p>
+                          <h4 className="font-semibold text-gray-800 dark:text-white">{cert.name}</h4>
+                          <p className="text-sm text-gray-600 dark:text-gray-400">{cert.issuer}</p>
                           {cert.credential && (
-                            <p className="text-xs text-gray-500">Credential ID: {cert.credential}</p>
+                            <p className="text-xs text-gray-500 dark:text-gray-500">Credential ID: {cert.credential}</p>
                           )}
                         </div>
                       </div>
                       <div className="text-right">
-                        <p className="text-sm font-medium text-yellow-600">{cert.date}</p>
+                        <p className="text-sm font-medium text-yellow-600 dark:text-yellow-400">{cert.date}</p>
                       </div>
                     </div>
                   ))}
@@ -212,12 +212,12 @@ const Skills = ({ skills }) => {
           {/* Interests & Hobbies */}
           {activeCategory === 'interestsAndHobbies' && (
             <div className="max-w-4xl mx-auto">
-              <div className="bg-white rounded-xl shadow-lg p-8">
+              <div className="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-8">
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-pink-500 to-rose-500 flex items-center justify-center text-white mr-4">
                     <Heart className="w-6 h-6" />
                   </div>
-                  <h3 className="text-3xl font-bold text-gray-800">Interests & Hobbies</h3>
+                  <h3 className="text-3xl font-bold text-gray-800 dark:text-white">Interests & Hobbies</h3>
                 </div>
                 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -226,7 +226,7 @@ const Skills = ({ skills }) => {
                       key={index}
                       className="group relative"
                     >
-                      <div className="px-6 py-4 rounded-lg text-gray-700 font-medium bg-gradient-to-r from-pink-100 to-rose-100 hover:from-pink-200 hover:to-rose-200 transition-all duration-300 hover:scale-105 cursor-default border border-pink-200">
+                      <div className="px-6 py-4 rounded-lg text-gray-700 dark:text-gray-300 font-medium bg-gradient-to-r from-pink-100 dark:from-pink-900/30 to-rose-100 dark:to-rose-900/30 hover:from-pink-200 dark:hover:from-pink-800/40 hover:to-rose-200 dark:hover:to-rose-800/40 transition-all duration-300 hover:scale-105 cursor-default border border-pink-200 dark:border-pink-700">
                         {interest}
                       </div>
                     </div>

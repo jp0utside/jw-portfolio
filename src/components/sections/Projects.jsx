@@ -53,21 +53,21 @@ const Projects = ({ projects }) => {
 
   if (!projects || projects.length === 0) {
     return (
-      <section id="projects" className="py-20 bg-white">
+      <section id="projects" className="py-20 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-6">
-          <h2 className="text-5xl lg:text-6xl font-bold text-center mb-16 text-gray-800">
+          <h2 className="text-5xl lg:text-6xl font-bold text-center mb-16 text-gray-800 dark:text-white">
             Featured Projects
           </h2>
-          <p className="text-center text-gray-600">No projects available.</p>
+          <p className="text-center text-gray-600 dark:text-gray-400">No projects available.</p>
         </div>
       </section>
     );
   }
 
   return (
-    <section id="projects" className="py-20 bg-white">
+    <section id="projects" className="py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-6">
-        <h2 className="text-5xl lg:text-6xl font-bold text-center mb-16 text-gray-800">
+        <h2 className="text-5xl lg:text-6xl font-bold text-center mb-16 text-gray-800 dark:text-white">
           Featured Projects
         </h2>
         
@@ -76,7 +76,7 @@ const Projects = ({ projects }) => {
             {/* Sidebar Navigation */}
             <div className="w-full lg:w-80 flex-shrink-0">
               <div className="sticky top-8">
-                <h3 className="text-2xl font-semibold mb-6 text-gray-700">Projects</h3>
+                <h3 className="text-2xl font-semibold mb-6 text-gray-700 dark:text-gray-300">Projects</h3>
                 <nav className="space-y-2">
                   {projects.map((project, index) => (
                     <button
@@ -85,7 +85,7 @@ const Projects = ({ projects }) => {
                       className={`w-full text-left p-4 rounded-lg transition-all duration-300 group ${
                         selectedProject === index
                           ? 'bg-green-600 text-white shadow-lg'
-                          : 'bg-gray-50 text-gray-700 hover:bg-green-50 hover:text-green-600 border border-gray-200'
+                          : 'bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-green-50 dark:hover:bg-green-900/20 hover:text-green-600 dark:hover:text-green-400 border border-gray-200 dark:border-gray-700'
                       }`}
                     >
                       <div className="flex items-center justify-between">
@@ -118,7 +118,7 @@ const Projects = ({ projects }) => {
 
             {/* Main Content */}
             <div className="flex-1 min-w-0">
-              <div className="bg-gray-50 rounded-xl shadow-lg overflow-hidden min-h-[600px]">
+              <div className="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden min-h-[600px]">
                 {projects[selectedProject] && (
                   <div className="animate-fade-in">
                     {/* Project Image */}
@@ -150,14 +150,14 @@ const Projects = ({ projects }) => {
                     <div className="p-8">
                       {/* Project Header */}
                       <div className="mb-6">
-                        <h3 className="text-3xl font-bold text-gray-800 mb-2">
+                        <h3 className="text-3xl font-bold text-gray-800 dark:text-white mb-2">
                           {projects[selectedProject].title}
                         </h3>
-                        <div className="flex items-center text-green-600 font-semibold mb-4">
-                          <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">
+                        <div className="flex items-center text-green-600 dark:text-green-400 font-semibold mb-4">
+                          <span className="bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 px-3 py-1 rounded-full text-sm">
                             {projects[selectedProject].category}
                           </span>
-                          <span className="ml-4 text-gray-600 flex items-center">
+                          <span className="ml-4 text-gray-600 dark:text-gray-400 flex items-center">
                             <Calendar className="w-4 h-4 mr-2" />
                             {projects[selectedProject].year}
                           </span>
@@ -166,11 +166,11 @@ const Projects = ({ projects }) => {
 
                       {/* Project Description */}
                       <div className="mb-6">
-                        <p className="text-gray-700 leading-relaxed text-lg">
+                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
                           {projects[selectedProject].description}
                         </p>
                         {projects[selectedProject].longDescription && (
-                          <p className="text-gray-600 leading-relaxed mt-4">
+                          <p className="text-gray-600 dark:text-gray-400 leading-relaxed mt-4">
                             {projects[selectedProject].longDescription}
                           </p>
                         )}
@@ -179,7 +179,7 @@ const Projects = ({ projects }) => {
                       {/* Technologies */}
                       {projects[selectedProject].tech && projects[selectedProject].tech.length > 0 && (
                         <div className="mb-6">
-                          <h4 className="text-xl font-semibold text-gray-800 mb-4">Technologies Used</h4>
+                          <h4 className="text-xl font-semibold text-gray-800 dark:text-white mb-4">Technologies Used</h4>
                           <div className="flex flex-wrap gap-3">
                             {projects[selectedProject].tech.map((tech, index) => (
                               <div

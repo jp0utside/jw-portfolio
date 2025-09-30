@@ -7,21 +7,21 @@ const Experience = ({ experience }) => {
 
   if (!experience || experience.length === 0) {
     return (
-      <section id="experience" className="py-20 bg-gray-50">
+      <section id="experience" className="py-20 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-16 text-gray-800">
+          <h2 className="text-4xl font-bold text-center mb-16 text-gray-800 dark:text-white">
             Professional Experience
           </h2>
-          <p className="text-center text-gray-600">No experience data available.</p>
+          <p className="text-center text-gray-600 dark:text-gray-400">No experience data available.</p>
         </div>
       </section>
     );
   }
 
   return (
-    <section id="experience" className="py-20 bg-gray-50">
+    <section id="experience" className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="container mx-auto px-6">
-        <h2 className="text-5xl lg:text-6xl font-bold text-center mb-16 text-gray-800">
+        <h2 className="text-5xl lg:text-6xl font-bold text-center mb-16 text-gray-800 dark:text-white">
           Professional Experience
         </h2>
         
@@ -30,7 +30,7 @@ const Experience = ({ experience }) => {
             {/* Sidebar Navigation */}
             <div className="w-full lg:w-80 flex-shrink-0">
               <div className="sticky top-8">
-                <h3 className="text-2xl font-semibold mb-6 text-gray-700">Roles</h3>
+                <h3 className="text-2xl font-semibold mb-6 text-gray-700 dark:text-gray-300">Roles</h3>
                 <nav className="space-y-2">
                   {experience.map((exp, index) => (
                     <button
@@ -39,7 +39,7 @@ const Experience = ({ experience }) => {
                       className={`w-full text-left p-4 rounded-lg transition-all duration-300 group ${
                         selectedExperience === index
                           ? 'bg-blue-600 text-white shadow-lg'
-                          : 'bg-white text-gray-700 hover:bg-blue-50 hover:text-blue-600 border border-gray-200'
+                          : 'bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:text-blue-600 dark:hover:text-blue-400 border border-gray-200 dark:border-gray-600'
                       }`}
                     >
                       <div className="flex items-center justify-between">
@@ -68,16 +68,16 @@ const Experience = ({ experience }) => {
 
             {/* Main Content */}
             <div className="flex-1 min-w-0">
-              <div className="bg-white rounded-xl shadow-lg p-8 min-h-[600px]">
+              <div className="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-8 min-h-[600px]">
                 {experience[selectedExperience] && (
                   <div className="animate-fade-in">
                     {/* Company Header */}
                     <div className="flex items-start justify-between mb-6">
                       <div className="flex-1">
-                        <h3 className="text-3xl font-bold text-gray-800 mb-2">
+                        <h3 className="text-3xl font-bold text-gray-800 dark:text-white mb-2">
                           {experience[selectedExperience].position}
                         </h3>
-                        <div className="flex items-center text-xl text-blue-600 font-semibold mb-4">
+                        <div className="flex items-center text-xl text-blue-600 dark:text-blue-400 font-semibold mb-4">
                           <Building2 className="w-5 h-5 mr-2" />
                           {experience[selectedExperience].company}
                         </div>
@@ -97,7 +97,7 @@ const Experience = ({ experience }) => {
                     </div>
 
                     {/* Location and Duration */}
-                    <div className="flex flex-wrap items-center gap-6 mb-6 text-gray-600">
+                    <div className="flex flex-wrap items-center gap-6 mb-6 text-gray-600 dark:text-gray-400">
                       <div className="flex items-center">
                         <MapPin className="w-4 h-4 mr-2" />
                         <span>{experience[selectedExperience].location}</span>
@@ -112,12 +112,12 @@ const Experience = ({ experience }) => {
 
                     {/* Description */}
                     <div className="mb-8">
-                      <h4 className="text-lg font-semibold text-gray-800 mb-4">Key Responsibilities</h4>
+                      <h4 className="text-lg font-semibold text-gray-800 dark:text-white mb-4">Key Responsibilities</h4>
                       <ul className="space-y-3">
                         {experience[selectedExperience].description.map((item, index) => (
                           <li key={index} className="flex items-start">
                             <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                            <span className="text-gray-700 leading-relaxed">{item}</span>
+                            <span className="text-gray-700 dark:text-gray-300 leading-relaxed">{item}</span>
                           </li>
                         ))}
                       </ul>
@@ -126,7 +126,7 @@ const Experience = ({ experience }) => {
                     {/* Technologies */}
                     {experience[selectedExperience].tech && experience[selectedExperience].tech.length > 0 && (
                       <div>
-                        <h4 className="text-xl font-semibold text-gray-800 mb-4">Technologies Used</h4>
+                        <h4 className="text-xl font-semibold text-gray-800 dark:text-white mb-4">Technologies Used</h4>
                         <div className="flex flex-wrap gap-3">
                           {experience[selectedExperience].tech.map((tech, index) => (
                             <div

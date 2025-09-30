@@ -4,7 +4,7 @@ const Personal = ({ personalInfo }) => {
   const { name, title, tagline, bio, location, email, phone, profileImage, social } = personalInfo;
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white flex items-center relative overflow-hidden">
+    <section className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 text-white flex items-center relative overflow-hidden">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-70"
