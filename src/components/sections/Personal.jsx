@@ -2,7 +2,6 @@ import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Globe } from 'lucide-re
 
 const Personal = ({ personalInfo }) => {
   const { name, title, tagline, bio, location, email, phone, profileImage, social } = personalInfo;
-  const test = "test 4";
 
   return (
     <section className="min-h-[80vh] bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 text-white flex items-center relative overflow-hidden">
@@ -36,9 +35,9 @@ const Personal = ({ personalInfo }) => {
                   }}
                 />
               </div>
-              <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center shadow-xl">
+              {/* <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center shadow-xl">
                 <span className="text-xl">👋</span>
-              </div>
+              </div> */}
             </div>
             
           </div>
@@ -46,17 +45,17 @@ const Personal = ({ personalInfo }) => {
           {/* Personal Info */}
           <div className="lg:col-span-3 text-center lg:text-left">
             {/* Name and Title for desktop */}
-            <div className="hidden lg:block mb-6">
-              <h1 className="text-6xl lg:text-6xl font-bold mb-3 text-gray-300 drop-shadow-2xl">
-                {test}
+            <div className="hidden lg:block mb-2">
+              <h1 className="text-6xl lg:text-6xl font-bold mb-3 text-gray-200 drop-shadow-2xl">
+                {name}
               </h1>
               
-              <h2 className="text-3xl lg:text-3xl font-semibold text-gray-300">
+              <h2 className="text-3xl lg:text-3xl font-semibold text-gray-200">
                 {title}
               </h2>
             </div>
             
-            <p className="text-2xl mb-6 text-gray-300 font-medium">
+            <p className="text-2xl mb-3 text-gray-300 font-medium">
               {tagline}
             </p>
             
