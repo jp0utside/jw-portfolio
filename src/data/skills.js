@@ -1,11 +1,11 @@
 export const skills = {
   tools: {
-    "Frontend": ["React", "React Native", "Vue.js", "HTML5", "Vite", "TailwindCSS"],
+    "Frontend": ["React", "React Native", "Redux","Vue.js", "HTML5", "Vite", "TailwindCSS"],
     "Backend": ["Node.js", "FastAPI", "CodeIgniter", "HTTPX"],
     "Machine Learning": ["PyTorch", "Scikit-Learn", "Deep Learning", "Reinforcement Learning"],
     "Data Management": ["PostgreSQL", "MySQL", "SQLite", "Pandas", "NumPy"],
     "Programming Languages": ["Python", "JavaScript", "Java", "C++", "Go", "HTML/CSS", "PHP", "MATLAB"],
-    "Cloud & Dev Tools": ["AWS", "Amazon S3", "Heroku", "Docker", "GitHub", "Cursor AI", "Claude AI"]
+    "Cloud & Dev Tools": ["AWS", "Amazon S3", "Heroku", "Docker", "GitHub", "Cursor AI", "Claude AI", "Figma"]
   },
   technicalSkills: {
     "Web": ["Frontend Development", "Backend Development", "API Development", "Microservices","UI/UX Design"],
