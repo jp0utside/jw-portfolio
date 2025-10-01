@@ -96,10 +96,10 @@ const Projects = ({ projects }) => {
                               <Star className="w-4 h-4 ml-1 fill-current text-yellow-400" />
                             )}
                           </h4>
-                          <p className="text-sm mt-1 truncate opacity-75">
+                          <p className="text-sm truncate opacity-75">
                             {project.category}
                           </p>
-                          <p className="text-sm mt-1 truncate opacity-60 flex items-center">
+                          <p className="text-sm truncate opacity-60 flex items-center">
                             <Calendar className="w-4 h-4 mr-1" />
                             {project.year}
                           </p>
@@ -135,8 +135,8 @@ const Projects = ({ projects }) => {
                             </div>
                           )}
                         </div>
-                        <div className="flex items-center justify-between mb-2">
-                          <h4 className="text-lg font-semibold text-gray-800 dark:text-white mb-3">
+                        <div className="flex items-center justify-between mb-1">
+                          <h4 className="text-lg font-medium text-gray-800 dark:text-white mb-1">
                             {projects[selectedProject].description}
                           </h4>
                         </div>

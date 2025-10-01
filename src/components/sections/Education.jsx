@@ -53,16 +53,16 @@ const Education = ({ education }) => {
                     >
                       <div className="flex items-center justify-between">
                         <div className="flex-1 min-w-0">
-                          <div className="flex items-center mb-1">
+                          <div className="flex items-center">
                             <span className="text-lg mr-2">{getDegreeIcon(edu.type)}</span>
                             <h4 className="font-semibold text-base truncate">
                               {edu.degree}
                             </h4>
                           </div>
-                          <p className="text-sm mt-1 truncate opacity-75">
+                          <p className="text-sm truncate opacity-75">
                             {edu.school}
                           </p>
-                          <p className="text-sm mt-1 truncate opacity-60 flex items-center">
+                          <p className="text-sm truncate opacity-60 flex items-center">
                             <Calendar className="w-3 h-3 mr-1" />
                             {edu.startDate} - {edu.endDate}
                           </p>

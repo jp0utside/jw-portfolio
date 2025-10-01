@@ -47,10 +47,11 @@ const Experience = ({ experience }) => {
                           <h4 className="font-semibold text-base truncate">
                             {exp.position}
                           </h4>
-                          <p className="text-sm mt-1 truncate opacity-75">
+                          <p className="text-sm truncate opacity-75">
                             {exp.company}
                           </p>
-                          <p className="text-sm mt-1 truncate opacity-60">
+                          <p className="text-sm truncate opacity-60 flex items-center">
+                            <Calendar className="w-3 h-3 mr-1" />
                             {exp.startDate} - {exp.endDate}
                           </p>
                         </div>
