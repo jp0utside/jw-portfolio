@@ -11,7 +11,7 @@ export const experience = [
       "Responsabilities included writing and teaching supplementary material in weekly section groups, writing and grading homework assignments, proctoring and grading exams, holding office hours for individual tutoring and being available by email for additional support.",
       "Initiated and facilitated the implementation of Gradescope, a grading tool, to expedite the grading process and reduce the workload put on the teaching staff. Implementation of this tool required configuring class roles and permissions, creating and uploading exams and manually transcribing rubrics into the Gradescope interface. Implementation of this tool reduced the total grading time by over 50%, allowing for all grades to be submitted by university deadlines."
     ],
-    tech: ["Gradescope", "Teaching", "Computer Science Theory"],
+    tech: ["Gradescope", "Teaching"],
     logo: "/images/ucsc-logo.png"
   },
   {
