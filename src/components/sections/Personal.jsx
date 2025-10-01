@@ -165,7 +165,7 @@ const Personal = ({ personalInfo }) => {
                 href="#education"
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-full text-white font-semibold transition-all duration-300 hover:scale-105 shadow-xl border border-white/20"
               >
-                View My Education
+                View My Work
                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                 </svg>
