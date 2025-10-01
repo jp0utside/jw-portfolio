@@ -14,9 +14,9 @@ const Personal = ({ personalInfo }) => {
       />
       
       <div className="container mx-auto px-6 py-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
+        <div className="grid lg:grid-cols-5 gap-8 items-center">
           {/* Profile Image Section */}
-          <div className="flex justify-center lg:justify-start">
+          <div className="lg:col-span-2 flex justify-center lg:justify-start">
             <div className="relative">
               {/* Background pattern behind profile image */}
               <div 
@@ -43,7 +43,7 @@ const Personal = ({ personalInfo }) => {
           </div>
 
           {/* Personal Info */}
-          <div className="text-center lg:text-left">
+          <div className="lg:col-span-3 text-center lg:text-left">
             {/* Name and Title for desktop */}
             <div className="hidden lg:block mb-6">
               <h1 className="text-4xl lg:text-5xl font-bold mb-3 text-gray-300 drop-shadow-2xl">
