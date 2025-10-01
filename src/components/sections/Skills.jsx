@@ -74,28 +74,28 @@ const Skills = ({ skills }) => {
   };
 
   return (
-    <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-800">
+    <section id="skills" className="py-12 bg-gray-50 dark:bg-gray-800">
       <div className="container mx-auto px-6">
-        <h2 className="text-5xl lg:text-6xl font-bold text-center mb-16 text-gray-800 dark:text-white">
+        <h2 className="text-3xl lg:text-4xl font-bold text-center mb-10 text-gray-800 dark:text-white">
           Skills & Expertise
         </h2>
         
         <div className="max-w-6xl mx-auto">
           {/* Category Tabs */}
-          <div className="flex flex-wrap justify-center mb-12 gap-4">
+          <div className="flex flex-wrap justify-center mb-8 gap-3">
             {categoryTabs.map((tab) => {
               const IconComponent = tab.icon;
               return (
                 <button
                   key={tab.id}
                   onClick={() => setActiveCategory(tab.id)}
-                  className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center ${
+                  className={`px-4 py-2 rounded-full font-semibold transition-all duration-300 flex items-center ${
                     activeCategory === tab.id
                       ? `${getTabColor(tab.id)} text-white shadow-lg`
                       : `bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-600 ${getTabHoverColor(tab.id)}`
                   }`}
                 >
-                  <IconComponent className="w-5 h-5 mr-2" />
+                  <IconComponent className="w-4 h-4 mr-2" />
                   {tab.label}
                 </button>
               );
@@ -104,25 +104,25 @@ const Skills = ({ skills }) => {
 
           {/* Tools */}
           {activeCategory === 'tools' && (
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-6">
               {Object.entries(skills.tools || {})
                 .filter(([category, skillList]) => skillList && skillList.length > 0)
                 .map(([category, skillList]) => (
-                <div key={category} className="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-8">
-                  <div className="flex items-center mb-6">
-                    <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${getCategoryColor(category)} flex items-center justify-center text-white mr-4`}>
-                      <span className="text-xl">{getCategoryIcon(category)}</span>
+                <div key={category} className="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-6">
+                  <div className="flex items-center mb-4">
+                    <div className={`w-10 h-10 rounded-lg bg-gradient-to-r ${getCategoryColor(category)} flex items-center justify-center text-white mr-3`}>
+                      <span className="text-lg">{getCategoryIcon(category)}</span>
                     </div>
-                    <h3 className="text-3xl font-bold text-gray-800 dark:text-white">{category}</h3>
+                    <h3 className="text-2xl font-bold text-gray-800 dark:text-white">{category}</h3>
                   </div>
                   
-                  <div className="flex flex-wrap gap-3">
+                  <div className="flex flex-wrap gap-2">
                     {skillList.map((skill, index) => (
                       <div
                         key={index}
                         className="group relative"
                       >
-                        <div className={`px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r ${getCategoryColor(category)} text-white shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-default flex items-center gap-2`}>
+                        <div className={`px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r ${getCategoryColor(category)} text-white shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-default flex items-center gap-2`}>
                           <span>{getTechIcon(skill)}</span>
                           <span>{skill}</span>
                         </div>
@@ -139,25 +139,25 @@ const Skills = ({ skills }) => {
 
           {/* Technical Skills */}
           {activeCategory === 'technicalSkills' && (
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-6">
               {Object.entries(skills.technicalSkills || {})
                 .filter(([category, skillList]) => skillList && skillList.length > 0)
                 .map(([category, skillList]) => (
-                <div key={category} className="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-8">
-                  <div className="flex items-center mb-6">
-                    <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${getCategoryColor(category)} flex items-center justify-center text-white mr-4`}>
-                      <span className="text-xl">{getCategoryIcon(category)}</span>
+                <div key={category} className="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-6">
+                  <div className="flex items-center mb-4">
+                    <div className={`w-10 h-10 rounded-lg bg-gradient-to-r ${getCategoryColor(category)} flex items-center justify-center text-white mr-3`}>
+                      <span className="text-lg">{getCategoryIcon(category)}</span>
                     </div>
-                    <h3 className="text-3xl font-bold text-gray-800 dark:text-white">{category}</h3>
+                    <h3 className="text-2xl font-bold text-gray-800 dark:text-white">{category}</h3>
                   </div>
                   
-                  <div className="flex flex-wrap gap-3">
+                  <div className="flex flex-wrap gap-2">
                     {skillList.map((skill, index) => (
                       <div
                         key={index}
                         className="group relative"
                       >
-                        <div className={`px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r ${getCategoryColor(category)} text-white shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-default flex items-center gap-2`}>
+                        <div className={`px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r ${getCategoryColor(category)} text-white shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-default flex items-center gap-2`}>
                           <span>{getTechIcon(skill)}</span>
                           <span>{skill}</span>
                         </div>
@@ -174,19 +174,19 @@ const Skills = ({ skills }) => {
 
           {/* Soft Skills */}
           {activeCategory === 'softSkills' && (
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-6">
               {Object.entries(skills.softSkills || {})
                 .filter(([category, skillList]) => skillList && skillList.length > 0)
                 .map(([category, skillList]) => (
-                <div key={category} className="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-8">
-                  <div className="flex items-center mb-6">
-                    <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${getCategoryColor(category)} flex items-center justify-center text-white mr-4`}>
-                      <span className="text-xl">{getCategoryIcon(category)}</span>
+                <div key={category} className="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-6">
+                  <div className="flex items-center mb-4">
+                    <div className={`w-10 h-10 rounded-lg bg-gradient-to-r ${getCategoryColor(category)} flex items-center justify-center text-white mr-3`}>
+                      <span className="text-lg">{getCategoryIcon(category)}</span>
                     </div>
-                    <h3 className="text-3xl font-bold text-gray-800 dark:text-white">{category}</h3>
+                    <h3 className="text-2xl font-bold text-gray-800 dark:text-white">{category}</h3>
                   </div>
                   
-                  <div className="flex flex-wrap gap-3">
+                  <div className="flex flex-wrap gap-2">
                     {skillList.map((skill, index) => (
                       <div
                         key={index}

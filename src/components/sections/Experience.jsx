@@ -19,18 +19,18 @@ const Experience = ({ experience }) => {
   }
 
   return (
-    <section id="experience" className="py-20 bg-gray-50 dark:bg-gray-800">
+    <section id="experience" className="py-12 bg-gray-50 dark:bg-gray-800">
       <div className="container mx-auto px-6">
-        <h2 className="text-5xl lg:text-6xl font-bold text-center mb-16 text-gray-800 dark:text-white">
+        <h2 className="text-3xl lg:text-4xl font-bold text-center mb-10 text-gray-800 dark:text-white">
           Professional Experience
         </h2>
         
         <div className="w-full">
-          <div className="flex flex-col lg:flex-row gap-8">
+          <div className="flex flex-col lg:flex-row gap-6">
             {/* Sidebar Navigation */}
             <div className="w-full lg:w-80 flex-shrink-0">
               <div className="sticky top-8">
-                <h3 className="text-2xl font-semibold mb-6 text-gray-700 dark:text-gray-300">Roles</h3>
+                <h3 className="text-xl font-semibold mb-4 text-gray-700 dark:text-gray-300">Roles</h3>
                 <nav className="space-y-2">
                   {experience.map((exp, index) => (
                     <button
@@ -68,16 +68,16 @@ const Experience = ({ experience }) => {
 
             {/* Main Content */}
             <div className="flex-1 min-w-0">
-              <div className="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-8 min-h-[600px]">
+              <div className="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-6 min-h-[500px]">
                 {experience[selectedExperience] && (
                   <div className="animate-fade-in">
                     {/* Company Header */}
-                    <div className="flex items-start justify-between mb-6">
+                    <div className="flex items-start justify-between mb-4">
                       <div className="flex-1">
-                        <h3 className="text-3xl font-bold text-gray-800 dark:text-white mb-2">
+                        <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-1">
                           {experience[selectedExperience].position}
                         </h3>
-                        <div className="flex items-center text-xl text-blue-600 dark:text-blue-400 font-semibold mb-4">
+                        <div className="flex items-center text-lg text-blue-600 dark:text-blue-400 font-semibold mb-3">
                           <Building2 className="w-5 h-5 mr-2" />
                           {experience[selectedExperience].company}
                         </div>
@@ -97,7 +97,7 @@ const Experience = ({ experience }) => {
                     </div>
 
                     {/* Location and Duration */}
-                    <div className="flex flex-wrap items-center gap-6 mb-6 text-gray-600 dark:text-gray-400">
+                    <div className="flex flex-wrap items-center gap-4 mb-4 text-gray-600 dark:text-gray-400">
                       <div className="flex items-center">
                         <MapPin className="w-4 h-4 mr-2" />
                         <span>{experience[selectedExperience].location}</span>
@@ -111,8 +111,8 @@ const Experience = ({ experience }) => {
                     </div>
 
                     {/* Description */}
-                    <div className="mb-8">
-                      <h4 className="text-lg font-semibold text-gray-800 dark:text-white mb-4">Key Responsibilities</h4>
+                    <div className="mb-6">
+                      <h4 className="text-base font-semibold text-gray-800 dark:text-white mb-3">Key Responsibilities</h4>
                       <ul className="space-y-3">
                         {experience[selectedExperience].description.map((item, index) => (
                           <li key={index} className="flex items-start">
@@ -126,7 +126,7 @@ const Experience = ({ experience }) => {
                     {/* Technologies */}
                     {experience[selectedExperience].tech && experience[selectedExperience].tech.length > 0 && (
                       <div>
-                        <h4 className="text-xl font-semibold text-gray-800 dark:text-white mb-4">Technologies Used</h4>
+                        <h4 className="text-lg font-semibold text-gray-800 dark:text-white mb-3">Technologies Used</h4>
                         <div className="flex flex-wrap gap-3">
                           {experience[selectedExperience].tech.map((tech, index) => (
                             <div

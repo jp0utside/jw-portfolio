@@ -65,18 +65,18 @@ const Projects = ({ projects }) => {
   }
 
   return (
-    <section id="projects" className="py-20 bg-white dark:bg-gray-900">
+    <section id="projects" className="py-12 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-6">
-        <h2 className="text-5xl lg:text-6xl font-bold text-center mb-16 text-gray-800 dark:text-white">
+        <h2 className="text-3xl lg:text-4xl font-bold text-center mb-10 text-gray-800 dark:text-white">
           Projects
         </h2>
         
         <div className="w-full">
-          <div className="flex flex-col lg:flex-row gap-8">
+          <div className="flex flex-col lg:flex-row gap-6">
             {/* Sidebar Navigation */}
             <div className="w-full lg:w-80 flex-shrink-0">
               <div className="sticky top-8">
-                <h3 className="text-2xl font-semibold mb-6 text-gray-700 dark:text-gray-300">Projects</h3>
+                <h3 className="text-xl font-semibold mb-4 text-gray-700 dark:text-gray-300">Projects</h3>
                 <nav className="space-y-2">
                   {projects.map((project, index) => (
                     <button
@@ -118,14 +118,14 @@ const Projects = ({ projects }) => {
 
             {/* Main Content */}
             <div className="flex-1 min-w-0">
-              <div className="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden min-h-[600px]">
+              <div className="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden min-h-[500px]">
                 {projects[selectedProject] && (
                   <div className="animate-fade-in">
-                    <div className="p-8">
+                    <div className="p-6">
                       {/* Project Header */}
-                      <div className="mb-6">
+                      <div className="mb-4">
                         <div className="flex items-center justify-between mb-2">
-                          <h3 className="text-3xl font-bold text-gray-800 dark:text-white">
+                          <h3 className="text-2xl font-bold text-gray-800 dark:text-white">
                             {projects[selectedProject].title}
                           </h3>
                           {projects[selectedProject].featured && (
@@ -135,7 +135,7 @@ const Projects = ({ projects }) => {
                             </div>
                           )}
                         </div>
-                        <div className="flex items-center text-green-600 dark:text-green-400 font-semibold mb-4">
+                        <div className="flex items-center text-green-600 dark:text-green-400 font-semibold mb-3">
                           <span className="bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 px-3 py-1 rounded-full text-sm">
                             {projects[selectedProject].category}
                           </span>
@@ -147,12 +147,12 @@ const Projects = ({ projects }) => {
                       </div>
 
                       {/* Project Description */}
-                      <div className="mb-6">
-                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
+                      <div className="mb-4">
+                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-base">
                           {projects[selectedProject].description}
                         </p>
                         {projects[selectedProject].longDescription && (
-                          <p className="text-gray-600 dark:text-gray-400 leading-relaxed mt-4">
+                          <p className="text-gray-600 dark:text-gray-400 leading-relaxed mt-3">
                             {projects[selectedProject].longDescription}
                           </p>
                         )}
@@ -160,8 +160,8 @@ const Projects = ({ projects }) => {
 
                       {/* Technologies */}
                       {projects[selectedProject].tech && projects[selectedProject].tech.length > 0 && (
-                        <div className="mb-6">
-                          <h4 className="text-xl font-semibold text-gray-800 dark:text-white mb-4">Technologies Used</h4>
+                        <div className="mb-4">
+                          <h4 className="text-lg font-semibold text-gray-800 dark:text-white mb-3">Technologies Used</h4>
                           <div className="flex flex-wrap gap-3">
                             {projects[selectedProject].tech.map((tech, index) => (
                               <div

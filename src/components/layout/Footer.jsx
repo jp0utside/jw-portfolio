@@ -12,20 +12,19 @@ const Footer = ({ personalInfo }) => {
 
   return (
     <footer className="bg-gray-900 dark:bg-gray-950 text-white">
-      <div className="container mx-auto px-6 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="container mx-auto px-6 py-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Personal Info */}
           <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <h3 className="text-xl font-bold mb-3 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               {name || 'Jake Wilson'}
             </h3>
-            <p className="text-gray-300 mb-6 leading-relaxed">
-              Thank you for visiting my portfolio! I'm passionate about creating meaningful digital experiences 
-              and always excited to collaborate on new projects. Feel free to reach out if you'd like to work together.
+            <p className="text-gray-300 mb-4 leading-relaxed">
+              Thank you for visiting my portfolio! Feel free to reach out if you'd like to work together.
             </p>
             
             {/* Contact Information */}
-            <div className="space-y-3">
+            <div className="space-y-2">
               {email && (
                 <div className="flex items-center">
                   <Mail className="w-5 h-5 text-blue-400 mr-3" />
@@ -61,7 +60,7 @@ const Footer = ({ personalInfo }) => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-base font-semibold mb-3">Quick Links</h4>
             <ul className="space-y-2">
               <li>
                 <a href="#education" className="text-gray-300 hover:text-blue-400 transition-colors">
@@ -93,7 +92,7 @@ const Footer = ({ personalInfo }) => {
 
           {/* Social Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Connect With Me</h4>
+            <h4 className="text-base font-semibold mb-3">Connect With Me</h4>
             <div className="flex space-x-4">
               {social?.github && (
                 <a
@@ -147,7 +146,7 @@ const Footer = ({ personalInfo }) => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 dark:border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-gray-800 dark:border-gray-700 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
             © {new Date().getFullYear()} {name || 'Jake Wilson'}. All rights reserved.
           </p>

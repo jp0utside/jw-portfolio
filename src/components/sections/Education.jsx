@@ -28,18 +28,18 @@ const Education = ({ education }) => {
   };
 
   return (
-    <section id="education" className="py-20 bg-white dark:bg-gray-900">
+    <section id="education" className="py-12 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-6">
-        <h2 className="text-5xl lg:text-6xl font-bold text-center mb-16 text-gray-800 dark:text-white">
+        <h2 className="text-3xl lg:text-4xl font-bold text-center mb-10 text-gray-800 dark:text-white">
           Education
         </h2>
         
         <div className="w-full">
-          <div className="flex flex-col lg:flex-row gap-8">
+          <div className="flex flex-col lg:flex-row gap-6">
             {/* Sidebar Navigation */}
             <div className="w-full lg:w-80 flex-shrink-0">
               <div className="sticky top-8">
-                <h3 className="text-2xl font-semibold mb-6 text-gray-700 dark:text-gray-300">Degrees</h3>
+                <h3 className="text-xl font-semibold mb-4 text-gray-700 dark:text-gray-300">Degrees</h3>
                 <nav className="space-y-2">
                   {education.map((edu, index) => (
                     <button
@@ -81,34 +81,34 @@ const Education = ({ education }) => {
 
             {/* Main Content */}
             <div className="flex-1 min-w-0">
-              <div className="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-lg p-8 min-h-[600px]">
+              <div className="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-lg p-6 min-h-[500px]">
                 {education[selectedEducation] && (
                   <div className="animate-fade-in">
                     {/* Degree Header */}
-                    <div className="flex items-start justify-between mb-6">
+                    <div className="flex items-start justify-between mb-4">
                       <div className="flex-1">
-                        <div className="flex items-center mb-4">
-                          <span className="text-4xl mr-3">{getDegreeIcon(education[selectedEducation].type)}</span>
+                        <div className="flex items-center mb-3">
+                          <span className="text-2xl mr-2">{getDegreeIcon(education[selectedEducation].type)}</span>
                           <div>
-                            <h3 className="text-3xl font-bold text-gray-800 dark:text-white mb-2">
+                            <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-1">
                               {education[selectedEducation].degree}
                             </h3>
                             {education[selectedEducation].minor && (
-                              <p className="text-lg text-purple-600 dark:text-purple-400 font-medium">
+                              <p className="text-base text-purple-600 dark:text-purple-400 font-medium">
                                 Minor: {education[selectedEducation].minor}
                               </p>
                             )}
                           </div>
                         </div>
-                        <div className="flex items-center text-xl text-purple-600 dark:text-purple-400 font-semibold mb-4">
-                          <GraduationCap className="w-6 h-6 mr-2" />
+                        <div className="flex items-center text-lg text-purple-600 dark:text-purple-400 font-semibold mb-3">
+                          <GraduationCap className="w-5 h-5 mr-2" />
                           {education[selectedEducation].school}
                         </div>
                       </div>
                     </div>
 
                     {/* Location and Duration */}
-                    <div className="flex flex-wrap items-center gap-6 mb-6 text-gray-600 dark:text-gray-400">
+                    <div className="flex flex-wrap items-center gap-4 mb-4 text-gray-600 dark:text-gray-400">
                       <div className="flex items-center">
                         <MapPin className="w-4 h-4 mr-2" />
                         <span>{education[selectedEducation].location}</span>

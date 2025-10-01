@@ -4,7 +4,7 @@ const Personal = ({ personalInfo }) => {
   const { name, title, tagline, bio, location, email, phone, profileImage, social } = personalInfo;
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 text-white flex items-center relative overflow-hidden">
+    <section className="min-h-[80vh] bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 text-white flex items-center relative overflow-hidden">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-70"
@@ -13,8 +13,8 @@ const Personal = ({ personalInfo }) => {
         }}
       />
       
-      <div className="container mx-auto px-6 py-16 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-6 py-8 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Profile Image Section */}
           <div className="flex justify-center lg:justify-start">
             <div className="relative">
@@ -25,7 +25,7 @@ const Personal = ({ personalInfo }) => {
                   backgroundImage: 'url("/images/background.jpg")'
                 }}
               />
-              <div className="relative w-96 h-96 rounded-full overflow-hidden border-4 border-white/30 shadow-2xl">
+              <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-white/30 shadow-2xl">
                 <img
                   src={profileImage}
                   alt={name}
@@ -35,8 +35,8 @@ const Personal = ({ personalInfo }) => {
                   }}
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center shadow-xl">
-                <span className="text-3xl">👋</span>
+              <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center shadow-xl">
+                <span className="text-xl">👋</span>
               </div>
             </div>
             
@@ -45,33 +45,33 @@ const Personal = ({ personalInfo }) => {
           {/* Personal Info */}
           <div className="text-center lg:text-left">
             {/* Name and Title for desktop */}
-            <div className="hidden lg:block mb-8">
-              <h1 className="text-6xl lg:text-8xl font-bold mb-4 text-gray-300 drop-shadow-2xl">
+            <div className="hidden lg:block mb-6">
+              <h1 className="text-4xl lg:text-5xl font-bold mb-3 text-gray-300 drop-shadow-2xl">
                 {name}
               </h1>
               
-              <h2 className="text-3xl lg:text-4xl font-semibold text-gray-300">
+              <h2 className="text-2xl lg:text-3xl font-semibold text-gray-300">
                 {title}
               </h2>
             </div>
             
-            <p className="text-2xl mb-8 text-gray-300 font-medium">
+            <p className="text-xl mb-6 text-gray-300 font-medium">
               {tagline}
             </p>
             
             {/* Bio with solid background overlay */}
             <div className="relative">
-              <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-                <p className="text-xl text-gray-100 leading-relaxed">
+              <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                <p className="text-lg text-gray-100 leading-relaxed">
                   {bio}
                 </p>
               </div>
             </div>
 
             {/* Contact Information */}
-            <div className="bg-black/30 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <h3 className="text-lg font-semibold text-blue-300 mb-4">Contact Information</h3>
-              <div className="space-y-3">
+            <div className="bg-black/30 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+              <h3 className="text-base font-semibold text-blue-300 mb-3">Contact Information</h3>
+              <div className="space-y-2">
                 {email && (
                   <div className="flex items-center justify-center lg:justify-start space-x-3">
                     <Mail className="w-5 h-5 text-blue-400" />
@@ -106,15 +106,15 @@ const Personal = ({ personalInfo }) => {
             </div>
 
             {/* Social Links */}
-            <div className="bg-black/30 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <h3 className="text-lg font-semibold text-blue-300 mb-4">Connect With Me</h3>
+            <div className="bg-black/30 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+              <h3 className="text-base font-semibold text-blue-300 mb-3">Connect With Me</h3>
               <div className="flex justify-center lg:justify-start space-x-6">
                 {social?.github && (
                   <a
                     href={social.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 border border-white/30"
+                    className="w-10 h-10 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 border border-white/30"
                     aria-label="GitHub"
                   >
                     <Github className="w-6 h-6" />
@@ -126,7 +126,7 @@ const Personal = ({ personalInfo }) => {
                     href={social.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 border border-white/30"
+                    className="w-10 h-10 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 border border-white/30"
                     aria-label="LinkedIn"
                   >
                     <Linkedin className="w-6 h-6" />
@@ -138,7 +138,7 @@ const Personal = ({ personalInfo }) => {
                     href={social.twitter}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 border border-white/30"
+                    className="w-10 h-10 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 border border-white/30"
                     aria-label="Twitter"
                   >
                     <Twitter className="w-6 h-6" />
@@ -150,7 +150,7 @@ const Personal = ({ personalInfo }) => {
                     href={social.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 border border-white/30"
+                    className="w-10 h-10 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 border border-white/30"
                     aria-label="Website"
                   >
                     <Globe className="w-6 h-6" />
@@ -160,10 +160,10 @@ const Personal = ({ personalInfo }) => {
             </div>
 
             {/* Call to Action */}
-            <div className="mt-12 flex justify-center lg:justify-start">
+            <div className="mt-8 flex justify-center lg:justify-start">
               <a
                 href="#education"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-full text-white font-semibold transition-all duration-300 hover:scale-105 shadow-xl border border-white/20"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-full text-white font-semibold transition-all duration-300 hover:scale-105 shadow-xl border border-white/20"
               >
                 View My Education
                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
