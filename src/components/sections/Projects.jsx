@@ -135,6 +135,11 @@ const Projects = ({ projects }) => {
                             </div>
                           )}
                         </div>
+                        <div className="flex items-center justify-between mb-2">
+                          <h4 className="text-lg font-semibold text-gray-800 dark:text-white mb-3">
+                            {projects[selectedProject].description}
+                          </h4>
+                        </div>
                         <div className="flex items-center text-green-600 dark:text-green-400 font-semibold mb-3">
                           <span className="bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 px-3 py-1 rounded-full text-sm">
                             {projects[selectedProject].category}
@@ -148,9 +153,6 @@ const Projects = ({ projects }) => {
 
                       {/* Project Description */}
                       <div className="mb-4">
-                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-base">
-                          {projects[selectedProject].description}
-                        </p>
                         {projects[selectedProject].longDescription && (
                           <p className="text-gray-600 dark:text-gray-400 leading-relaxed mt-3">
                             {projects[selectedProject].longDescription}
