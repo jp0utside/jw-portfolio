@@ -25,7 +25,7 @@ const Personal = ({ personalInfo }) => {
                   backgroundImage: 'url("/images/background.jpg")'
                 }}
               />
-              <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-white/30 shadow-2xl">
+              <div className="relative w-70 h-70 rounded-full overflow-hidden border-4 border-white/30 shadow-2xl">
                 <img
                   src={profileImage}
                   alt={name}
@@ -46,16 +46,16 @@ const Personal = ({ personalInfo }) => {
           <div className="lg:col-span-3 text-center lg:text-left">
             {/* Name and Title for desktop */}
             <div className="hidden lg:block mb-6">
-              <h1 className="text-4xl lg:text-5xl font-bold mb-3 text-gray-300 drop-shadow-2xl">
+              <h1 className="text-6xl lg:text-6xl font-bold mb-3 text-gray-300 drop-shadow-2xl">
                 {name}
               </h1>
               
-              <h2 className="text-2xl lg:text-3xl font-semibold text-gray-300">
+              <h2 className="text-3xl lg:text-3xl font-semibold text-gray-300">
                 {title}
               </h2>
             </div>
             
-            <p className="text-xl mb-6 text-gray-300 font-medium">
+            <p className="text-2xl mb-6 text-gray-300 font-medium">
               {tagline}
             </p>
             
