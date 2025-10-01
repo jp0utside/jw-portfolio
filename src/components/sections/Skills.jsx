@@ -3,9 +3,42 @@ import { Wrench, Code, Users, Award, Heart } from 'lucide-react';
 import { getTechColor, getTechIcon, getCategoryColor, getCategoryIcon } from '../../utils/techColors';
 
 const Skills = ({ skills }) => {
-  const [activeCategory, setActiveCategory] = useState('tools');
+  // Generate tabs dynamically first to determine default active tab
+  const generateTabs = () => {
+    const tabs = [];
+    
+    // Check Tools section
+    if (skills.tools && Object.entries(skills.tools).some(([category, skillList]) => skillList && skillList.length > 0)) {
+      tabs.push({ id: 'tools', label: 'Tools', icon: Wrench });
+    }
+    
+    // Check Technical Skills section
+    if (skills.technicalSkills && Object.entries(skills.technicalSkills).some(([category, skillList]) => skillList && skillList.length > 0)) {
+      tabs.push({ id: 'technicalSkills', label: 'Technical Skills', icon: Code });
+    }
+    
+    // Check Soft Skills section
+    if (skills.softSkills && Object.entries(skills.softSkills).some(([category, skillList]) => skillList && skillList.length > 0)) {
+      tabs.push({ id: 'softSkills', label: 'Soft Skills', icon: Users });
+    }
+    
+    // Check Certifications section
+    if (skills.certifications && skills.certifications.length > 0) {
+      tabs.push({ id: 'certifications', label: 'Certifications', icon: Award });
+    }
+    
+    // Check Interests & Hobbies section
+    if (skills.interestsAndHobbies && skills.interestsAndHobbies.length > 0) {
+      tabs.push({ id: 'interestsAndHobbies', label: 'Interests & Hobbies', icon: Heart });
+    }
+    
+    return tabs;
+  };
+  
+  const categoryTabs = generateTabs();
+  const [activeCategory, setActiveCategory] = useState(categoryTabs.length > 0 ? categoryTabs[0].id : '');
 
-  if (!skills) {
+  if (!skills || categoryTabs.length === 0) {
     return (
       <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-6">
@@ -17,14 +50,6 @@ const Skills = ({ skills }) => {
       </section>
     );
   }
-
-  const categoryTabs = [
-    { id: 'tools', label: 'Tools', icon: Wrench },
-    { id: 'technicalSkills', label: 'Technical Skills', icon: Code },
-    { id: 'softSkills', label: 'Soft Skills', icon: Users },
-    { id: 'certifications', label: 'Certifications', icon: Award },
-    { id: 'interestsAndHobbies', label: 'Interests & Hobbies', icon: Heart }
-  ];
 
   const getTabColor = (categoryId) => {
     const colors = {
@@ -80,7 +105,9 @@ const Skills = ({ skills }) => {
           {/* Tools */}
           {activeCategory === 'tools' && (
             <div className="grid md:grid-cols-2 gap-8">
-              {Object.entries(skills.tools || {}).map(([category, skillList]) => (
+              {Object.entries(skills.tools || {})
+                .filter(([category, skillList]) => skillList && skillList.length > 0)
+                .map(([category, skillList]) => (
                 <div key={category} className="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-8">
                   <div className="flex items-center mb-6">
                     <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${getCategoryColor(category)} flex items-center justify-center text-white mr-4`}>
@@ -113,7 +140,9 @@ const Skills = ({ skills }) => {
           {/* Technical Skills */}
           {activeCategory === 'technicalSkills' && (
             <div className="grid md:grid-cols-2 gap-8">
-              {Object.entries(skills.technicalSkills || {}).map(([category, skillList]) => (
+              {Object.entries(skills.technicalSkills || {})
+                .filter(([category, skillList]) => skillList && skillList.length > 0)
+                .map(([category, skillList]) => (
                 <div key={category} className="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-8">
                   <div className="flex items-center mb-6">
                     <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${getCategoryColor(category)} flex items-center justify-center text-white mr-4`}>
@@ -145,28 +174,35 @@ const Skills = ({ skills }) => {
 
           {/* Soft Skills */}
           {activeCategory === 'softSkills' && (
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-8">
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-violet-500 flex items-center justify-center text-white mr-4">
-                    <Users className="w-6 h-6" />
-                  </div>
-                  <h3 className="text-3xl font-bold text-gray-800 dark:text-white">Soft Skills</h3>
-                </div>
-                
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {skills.softSkills.map((skill, index) => (
-                    <div
-                      key={index}
-                      className="group relative"
-                    >
-                      <div className="px-6 py-4 rounded-lg text-gray-700 dark:text-gray-300 font-medium bg-gradient-to-r from-purple-100 dark:from-purple-900/30 to-violet-100 dark:to-violet-900/30 hover:from-purple-200 dark:hover:from-purple-800/40 hover:to-violet-200 dark:hover:to-violet-800/40 transition-all duration-300 hover:scale-105 cursor-default border border-purple-200 dark:border-purple-700">
-                        {skill}
-                      </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              {Object.entries(skills.softSkills || {})
+                .filter(([category, skillList]) => skillList && skillList.length > 0)
+                .map(([category, skillList]) => (
+                <div key={category} className="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-8">
+                  <div className="flex items-center mb-6">
+                    <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${getCategoryColor(category)} flex items-center justify-center text-white mr-4`}>
+                      <span className="text-xl">{getCategoryIcon(category)}</span>
                     </div>
-                  ))}
+                    <h3 className="text-3xl font-bold text-gray-800 dark:text-white">{category}</h3>
+                  </div>
+                  
+                  <div className="flex flex-wrap gap-3">
+                    {skillList.map((skill, index) => (
+                      <div
+                        key={index}
+                        className="group relative"
+                      >
+                        <div className={`px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r ${getCategoryColor(category)} text-white shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-default`}>
+                          {skill}
+                        </div>
+                        <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                          {skill}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              ))}
             </div>
           )}
 
