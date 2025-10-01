@@ -10,7 +10,8 @@ export const education = [
     specialization: "Machine Learning, Computer Networking, Cybersecurity",
     coursework: ["Machine Learning", "Computer Networking", "Advanced Algorithms", "Research Methods"],
     achievements: ["M.S. Capstone Project: S-BLE Seat Position Classifier"],
-    type: "graduate"
+    type: "graduate",
+    logo: "/images/ucsc-logo.png"
   },
   {
     id: 2,
@@ -27,6 +28,7 @@ export const education = [
       "Highest Honors in Major",
       "Organizations: ΑΕΠ (Alpha Epsilon Pi), ΔΣΠ (Delta Sigma Pi)"
     ],
-    type: "undergraduate"
+    type: "undergraduate",
+    logo: "/images/ucsc-logo.png"
   }
 ];

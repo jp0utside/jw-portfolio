@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Calendar, MapPin, GraduationCap, Award, BookOpen, ChevronRight } from 'lucide-react';
+import { Calendar, MapPin, GraduationCap, Award, BookOpen, ChevronRight, Target } from 'lucide-react';
 
 const Education = ({ education }) => {
   const [selectedEducation, setSelectedEducation] = useState(0);
@@ -85,26 +85,36 @@ const Education = ({ education }) => {
                 {education[selectedEducation] && (
                   <div className="animate-fade-in">
                     {/* Degree Header */}
-                    <div className="flex items-start justify-between mb-4">
+                    <div className="flex items-start justify-between mb-2">
                       <div className="flex-1">
-                        <div className="flex items-center mb-3">
-                          <span className="text-2xl mr-2">{getDegreeIcon(education[selectedEducation].type)}</span>
-                          <div>
-                            <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-1">
-                              {education[selectedEducation].degree}
-                            </h3>
-                            {education[selectedEducation].minor && (
-                              <p className="text-base text-purple-600 dark:text-purple-400 font-medium">
-                                Minor: {education[selectedEducation].minor}
-                              </p>
-                            )}
-                          </div>
+                        <div className="flex items-center mb-1">
+                          <span className="text-2xl mr-3 flex-shrink-0">{getDegreeIcon(education[selectedEducation].type)}</span>
+                          <h3 className="text-2xl font-bold text-gray-800 dark:text-white">
+                            {education[selectedEducation].degree}
+                          </h3>
                         </div>
-                        <div className="flex items-center text-lg text-purple-600 dark:text-purple-400 font-semibold mb-3">
+                        {education[selectedEducation].minor && (
+                          <p className="text-xl text-gray-800 dark:text-white font-semibold mb-1 ml-11">
+                            Minor: {education[selectedEducation].minor}
+                          </p>
+                        )}
+                        <div className="flex items-center text-lg text-purple-600 dark:text-purple-400 font-semibold mb-1">
                           <GraduationCap className="w-5 h-5 mr-2" />
                           {education[selectedEducation].school}
                         </div>
                       </div>
+                      {education[selectedEducation].logo && (
+                        <div className="w-16 h-16 rounded-lg overflow-hidden shadow-md">
+                          <img
+                            src={education[selectedEducation].logo}
+                            alt={`${education[selectedEducation].school} logo`}
+                            className="w-full h-full object-cover"
+                            onError={(e) => {
+                              e.target.style.display = 'none';
+                            }}
+                          />
+                        </div>
+                      )}
                     </div>
 
                     {/* Location and Duration */}
@@ -130,7 +140,10 @@ const Education = ({ education }) => {
                     {/* Specialization */}
                     {education[selectedEducation].specialization && (
                       <div className="mb-6">
-                        <h4 className="text-lg font-semibold text-gray-800 dark:text-white mb-3">Specialization</h4>
+                        <h4 className="text-lg font-semibold text-gray-800 dark:text-white mb-3 flex items-center">
+                          <Target className="w-5 h-5 mr-2" />
+                          Specialization
+                        </h4>
                         <div className="flex flex-wrap gap-2">
                           {education[selectedEducation].specialization.split(', ').map((spec, index) => (
                             <span
