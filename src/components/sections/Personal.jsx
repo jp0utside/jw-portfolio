@@ -2,7 +2,7 @@ import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Globe } from 'lucide-re
 
 const Personal = ({ personalInfo }) => {
   const { name, title, tagline, bio, location, email, phone, profileImage, social } = personalInfo;
-  const test = "test 3";
+  const test = "test 4";
 
   return (
     <section className="min-h-[80vh] bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 text-white flex items-center relative overflow-hidden">
@@ -20,13 +20,13 @@ const Personal = ({ personalInfo }) => {
           <div className="lg:col-span-2 flex justify-center lg:justify-start">
             <div className="relative">
               {/* Background pattern behind profile image */}
-              <div 
+              {/* <div 
                 className="absolute inset-0 w-84 h-84 rounded-full opacity-30 bg-cover bg-center"
                 style={{
                   backgroundImage: 'url("/images/background.jpg")'
                 }}
-              />
-              <div className="relative w-72 h-72 rounded-full overflow-hidden border-4 border-white/30 shadow-2xl">
+              /> */}
+              <div className="relative w-96 h-96 rounded-full overflow-hidden border-4 border-white/30 shadow-2xl">
                 <img
                   src={profileImage}
                   alt={name}
