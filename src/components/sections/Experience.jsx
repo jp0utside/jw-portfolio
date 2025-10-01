@@ -72,12 +72,12 @@ const Experience = ({ experience }) => {
                 {experience[selectedExperience] && (
                   <div className="animate-fade-in">
                     {/* Company Header */}
-                    <div className="flex items-start justify-between mb-4">
+                    <div className="flex items-start justify-between mb-1">
                       <div className="flex-1">
                         <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-1">
                           {experience[selectedExperience].position}
                         </h3>
-                        <div className="flex items-center text-lg text-blue-600 dark:text-blue-400 font-semibold mb-3">
+                        <div className="flex items-center text-lg text-blue-600 dark:text-blue-400 font-semibold mb-1">
                           <Building2 className="w-5 h-5 mr-2" />
                           {experience[selectedExperience].company}
                         </div>
@@ -97,7 +97,7 @@ const Experience = ({ experience }) => {
                     </div>
 
                     {/* Location and Duration */}
-                    <div className="flex flex-wrap items-center gap-4 mb-4 text-gray-600 dark:text-gray-400">
+                    <div className="flex flex-wrap items-center gap-4 mb-2 text-gray-600 dark:text-gray-400">
                       <div className="flex items-center">
                         <MapPin className="w-4 h-4 mr-2" />
                         <span>{experience[selectedExperience].location}</span>
