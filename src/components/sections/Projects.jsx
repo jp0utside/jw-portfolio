@@ -68,7 +68,7 @@ const Projects = ({ projects }) => {
     <section id="projects" className="py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-6">
         <h2 className="text-5xl lg:text-6xl font-bold text-center mb-16 text-gray-800 dark:text-white">
-          Featured Projects
+          Projects
         </h2>
         
         <div className="w-full">
@@ -121,38 +121,20 @@ const Projects = ({ projects }) => {
               <div className="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden min-h-[600px]">
                 {projects[selectedProject] && (
                   <div className="animate-fade-in">
-                    {/* Project Image */}
-                    <div className="h-64 bg-gradient-to-r from-green-400 to-blue-500 relative overflow-hidden">
-                      {projects[selectedProject].image ? (
-                        <img
-                          src={projects[selectedProject].image}
-                          alt={projects[selectedProject].title}
-                          className="w-full h-full object-cover"
-                          onError={(e) => {
-                            e.target.style.display = 'none';
-                          }}
-                        />
-                      ) : (
-                        <div className="w-full h-full flex items-center justify-center">
-                          <div className="text-white text-6xl opacity-50">
-                            {projects[selectedProject].title.charAt(0)}
-                          </div>
-                        </div>
-                      )}
-                      {projects[selectedProject].featured && (
-                        <div className="absolute top-4 right-4 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-semibold flex items-center">
-                          <Star className="w-4 h-4 mr-1 fill-current" />
-                          Featured
-                        </div>
-                      )}
-                    </div>
-
                     <div className="p-8">
                       {/* Project Header */}
                       <div className="mb-6">
-                        <h3 className="text-3xl font-bold text-gray-800 dark:text-white mb-2">
-                          {projects[selectedProject].title}
-                        </h3>
+                        <div className="flex items-center justify-between mb-2">
+                          <h3 className="text-3xl font-bold text-gray-800 dark:text-white">
+                            {projects[selectedProject].title}
+                          </h3>
+                          {projects[selectedProject].featured && (
+                            <div className="bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-semibold flex items-center">
+                              <Star className="w-4 h-4 mr-1 fill-current" />
+                              Featured
+                            </div>
+                          )}
+                        </div>
                         <div className="flex items-center text-green-600 dark:text-green-400 font-semibold mb-4">
                           <span className="bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 px-3 py-1 rounded-full text-sm">
                             {projects[selectedProject].category}
