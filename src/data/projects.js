@@ -22,7 +22,7 @@ export const projects = [
     github: "https://github.com/jp0utside/SBLE_project",
     live: null,
     featured: true,
-    category: "Machine Learning",
+    category: "Deep Learning Classifier",
     year: 2024
   },
   {
@@ -35,7 +35,7 @@ export const projects = [
     github: "https://github.com/jp0utside/SetScrape",
     live: null,
     featured: false,
-    category: "Full Stack",
+    category: "Full-Stack Mobile Application",
     year: 2025
   },
   {
@@ -48,7 +48,7 @@ export const projects = [
     github: "https://github.com/locally-imagined",
     live: null,
     featured: false,
-    category: "Full Stack",
+    category: "Full-Stack Web Application",
     year: 2023
   },
   {
@@ -61,7 +61,7 @@ export const projects = [
     github: "https://github.com/jp0utside/jw-portfolio",
     live: null,
     featured: false,
-    category: "Web Development",
+    category: "Frontend Web Application",
     year: 2025
   },
   {
@@ -74,7 +74,7 @@ export const projects = [
     github: null,
     live: null,
     featured: false,
-    category: "Machine Learning",
+    category: "Reinforcement Learning Agent",
     year: 2023
   },
   {
@@ -87,7 +87,7 @@ export const projects = [
     github: null,
     live: null,
     featured: false,
-    category: "Research",
+    category: "Wireless Network Security Simulation",
     year: 2023
   }
 ];
