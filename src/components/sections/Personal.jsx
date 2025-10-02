@@ -25,7 +25,7 @@ const Personal = ({ personalInfo }) => {
                   backgroundImage: 'url("/images/background.jpg")'
                 }}
               /> */}
-              <div className="relative w-96 h-96 rounded-full overflow-hidden border-4 border-white/30 shadow-2xl">
+              <div className="relative w-96 h-96 mb-20 rounded-full overflow-hidden border-4 border-white/30 shadow-2xl">
                 <img
                   src={profileImage}
                   alt={name}
@@ -41,7 +41,7 @@ const Personal = ({ personalInfo }) => {
             </div>
             
             {/* Call to Action - Moved to bottom left below profile image */}
-            <div className="mt-6 w-full flex justify-center lg:justify-start">
+            <div className="mt-20 w-full flex justify-center lg:justify-start">
               <a
                 href="#education"
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-full text-white font-semibold transition-all duration-300 hover:scale-105 shadow-xl border border-white/20"
