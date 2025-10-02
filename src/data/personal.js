@@ -11,7 +11,7 @@ export const personalInfo = {
     social: {
       github: "https://github.com/jp0utside",
       linkedin: "https://www.linkedin.com/in/jake-warsaw-a0064927/",
-      website: "https://jakewilson.dev" // Optional
+      website: "https://jpw-portfolio.vercel.app/" // Optional
     }
   };
   
