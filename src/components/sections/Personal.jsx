@@ -16,7 +16,7 @@ const Personal = ({ personalInfo }) => {
       <div className="container mx-auto px-6 py-8 relative z-10">
         <div className="grid lg:grid-cols-5 gap-8 items-center">
           {/* Profile Image Section */}
-          <div className="lg:col-span-2 flex justify-center lg:justify-start">
+          <div className="lg:col-span-2 flex flex-col items-center lg:items-start">
             <div className="relative">
               {/* Background pattern behind profile image */}
               {/* <div 
@@ -40,6 +40,18 @@ const Personal = ({ personalInfo }) => {
               </div> */}
             </div>
             
+            {/* Call to Action - Moved to bottom left below profile image */}
+            <div className="mt-6 w-full flex justify-center lg:justify-start">
+              <a
+                href="#education"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-full text-white font-semibold transition-all duration-300 hover:scale-105 shadow-xl border border-white/20"
+              >
+                View My Work
+                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+              </a>
+            </div>
           </div>
 
           {/* Personal Info */}
@@ -157,19 +169,6 @@ const Personal = ({ personalInfo }) => {
                   </a>
                 )}
               </div>
-            </div>
-
-            {/* Call to Action */}
-            <div className="mt-8 flex justify-center lg:justify-start">
-              <a
-                href="#education"
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-full text-white font-semibold transition-all duration-300 hover:scale-105 shadow-xl border border-white/20"
-              >
-                View My Work
-                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                </svg>
-              </a>
             </div>
           </div>
         </div>
