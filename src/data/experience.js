@@ -25,7 +25,7 @@ export const experience = [
       "Significantly expedited development cycles for the Credit User Experience team by redesigning React/Redux application used to test credit application flow, allowing testing from different builds and entry points before pushing code to production.",
       "Updated and centralized documentation on error-prone application processes by interviewing 10+ developers across 3 teams on their workflows in order to identify the most common and critical errors encountered during development.",
       "Enabled compliance testing through a suite of tools including sample user generation, login state control, and configurable entry data payloads, facilitating the detection of early compliance violations and preventing costly deployment delays.",
-      "Was a member of the Inclusionist Design Team, a team of interns tasked with creating designs used to promote accomodating both employees and users with different needs."
+      "Was a member of the Inclusionist Design Team, a team of interns tasked with creating designs used to promote accommodating both employees and users with different needs."
     ],
     tech: ["React", "Redux", "JavaScript", "Figma"],
     logo: "/images/paypal-logo.png"
