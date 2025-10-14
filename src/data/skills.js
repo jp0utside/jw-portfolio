@@ -1,6 +1,6 @@
 export const skills = {
   tools: {
-    "Frontend": ["React", "React Native", "Redux","Vue.js", "HTML5", "Vite", "TailwindCSS"],
+    "Frontend": ["React", "React Native", "Redux","Vue.js", "HTML5", "Vite", "TailwindCSS", "Swift"],
     "Backend": ["Node.js", "FastAPI", "CodeIgniter", "HTTPX"],
     "Machine Learning": ["PyTorch", "Scikit-Learn", "Deep Learning", "Reinforcement Learning"],
     "Data Management": ["PostgreSQL", "MySQL", "SQLite", "Pandas", "NumPy"],
