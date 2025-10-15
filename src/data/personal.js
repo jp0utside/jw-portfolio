@@ -1,8 +1,8 @@
 export const personalInfo = {
     name: "Jake Warsaw",
-    title: "M.S. in Computer Science & Engineering",
-    tagline: "Making Computers Work For You",
-    bio: "I'm a passionate developer who always codes with the end user in mind. I love building services that make a difference in people's lives, whether that means developing new ideas, innovating on existing ones, or simply making sure end-users are getting the most out of their products. I've spent the last 5 years exploring all areas of computer science, from machine learning to cybersecurity to web development, and I'm always looking for new challenges and opportunities to grow. When I'm not coding, you can find me hiking, skiing, playing guitar or listening to music.",
+    title: "Product-Minded Engineer",
+    tagline: "M.S. in Computer Science & Engineering, UC Santa Cruz",
+    bio: "I build with the end user in mind. Whether developing new products, improving existing ones, or collaborating with cross-functional teams, I combine technical depth with user research and data-driven decision making to create solutions that make a real difference in people's lives. I've spent the last 5 years exploring computer science—from machine learning to full-stack development—always focused on solving meaningful problems. When I'm not coding, you can find me hiking, skiing, playing guitar, or discovering live music.",
     location: "Menlo Park, CA",
     email: "jacobpwarsaw@gmail.com",
     phone: "+1 (650) 388-8386", // Optional
