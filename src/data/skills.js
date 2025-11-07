@@ -3,14 +3,14 @@ export const skills = {
     "Frontend": ["React", "React Native", "Redux","Vue.js", "HTML5", "Vite", "TailwindCSS", "Swift"],
     "Backend": ["Node.js", "FastAPI", "CodeIgniter", "HTTPX"],
     "Machine Learning": ["PyTorch", "Scikit-Learn", "Deep Learning", "Reinforcement Learning"],
-    "Data Management": ["PostgreSQL", "MySQL", "SQLite", "Pandas", "NumPy"],
+    "Data Management": ["PostgreSQL", "MySQL", "SQLite", "Pandas", "NumPy", "ChromaDB"],
     "Programming Languages": ["Python", "JavaScript", "Java", "C++", "Go", "HTML/CSS", "PHP", "MATLAB"],
     "Cloud & Dev Tools": ["AWS", "Amazon S3", "Heroku", "Docker", "GitHub", "Cursor AI", "Claude AI", "Figma"]
   },
   technicalSkills: {
     "Web": ["Frontend Development", "Backend Development", "API Development", "Microservices","UI/UX Design"],
     "Data": ["Database Management", "Database Design", "Data Visualization", "Data Analysis"],
-    "Machine Learning/AI": ["Model Selection", "Feature Engineering", "Model Training & Analysis", "Performance Evaluation"],
+    "Machine Learning/AI": ["Model Selection", "Feature Engineering", "Model Training & Analysis", "Performance Evaluation", "RAG", "Vector Embeddings"],
     "Theory": ["Data Structures", "Algorithmic Analysis", "Technical Research & Development", "Network Protocols", "Cryptographic Algorithms & Protocols"],
     "Support & Documentation": ["Desktop Support", "Troubleshooting", "Technical Writing", "End-User Tutorials", "Detailed Error Logging"]
   },

@@ -27,6 +27,19 @@ export const projects = [
   },
   {
     id: 2,
+    title: "SetlistAI",
+    description: "A RAG-based LLM system for querying live music performance data.",
+    longDescription: "A Retrieval-Augmented Generation (RAG) system that enables users to query live music setlist data using natural language, answering questions like 'What was the longest Dark Star by Grateful Dead?' or 'Which shows had Terrapin Station?' with accurate, data-grounded responses. The system implements a two-stage retrieval architecture: vector similarity search using OpenAI embeddings (text-embedding-3-small) stored in ChromaDB to identify semantically relevant setlists, followed by SQLite database lookups to fetch complete concert details including venue, date, and full song listings. Built with a modular pipeline handling data collection from the Setlist.fm API, structured processing with date normalization and song extraction, embedding generation for semantic search, and natural language response generation via GPT-4o-mini with carefully engineered system prompts. The architecture separates concerns across distinct components (collector, processor, database, embeddings, retriever, LLM generator) orchestrated through an interactive CLI with verbose mode and example queries. Current implementation achieves accurate retrieval with ~0.70+ similarity scores and generates contextually appropriate responses citing specific shows and dates. Future production enhancements planned include PostgreSQL migration for scalability, Pinecone for managed vector storage, fine-tuned Llama 3.1 8B model for domain-specific responses, FastAPI web service, React frontend, and comprehensive MLOps infrastructure (MLflow, DVC, Prometheus/Grafana).",
+    tech: ["Python", "SQLite", "ChromaDB", "OpenAI API", "RAG", "Vector Embeddings", "LLM"],
+    gallery: [],
+    github: "https://github.com/jp0utside/setlist-ai",
+    live: null,
+    featured: false,
+    category: "RAG System",
+    year: 2025
+  },
+  {
+    id: 3,
     title: "Muze: a Unified Music Library",
     description: "All your music, all in one place",
     longDescription: "A unified iOS music player that seamlessly integrates Spotify streaming with personal local audio libraries into a single cohesive playback experience. The app uses Swift and SwiftUI for iOS 17+, with the Spotify iOS SDK for remote playback control, AVFoundation for local audio, NSMetadataQuery for iCloud file monitoring, and SwiftData for type-safe data persistence. The architecture features source-agnostic Track models enabling mixed-source playlists, UUID-based references for memory efficiency, and a service layer pattern for clean separation of concerns. Current features include full local audio playback with automatic iCloud sync, Spotify OAuth authentication with liked songs import, unified library browsing across both sources, mixed-source playlist creation with queue management, real-time metadata extraction from audio files, and persistent data storage. Planned enhancements include integrating additional streaming and file storage services, implementing background playback and lock screen controls, including artwork extraction and caching, and comprehensive UI/UX polish with animations and error handling.",
@@ -39,7 +52,7 @@ export const projects = [
     year: 2025
   },
   {
-    id: 3,
+    id: 4,
     title: "BrowseNativeAI",
     description: "A browser extension for increasing site accessibility for all users.",
     longDescription: "A browser extension that empowers users to customize web page accessibility by providing granular control over CSS styling attributes through an intuitive interface. The extension uses a content script architecture for DOM manipulation, a popup-based UI for user interaction, and Chrome's messaging API for communication between components. Current features include automatic page scanning, a basic mode with accessibility controls for minimum text and button sizes, text contrast, and spacing adjustments, an advanced mode with fine-grained control over individual attribute groups (allowing users to increase/decrease font sizes, modify colors with a color picker, and adjust padding/margins), visual element highlighting when hovering over attribute groups, persistent change tracking showing original → current value transformations, and full reset capability to restore all changes. Planned enhancements include integrating AI-powered CSS modification suggestions using the Claude API, implementing intelligent preset modes (large text, high contrast) with domain-specific caching, expanding to support additional accessibility features like line height and letter spacing, adding per-site preference persistence with Chrome Storage API, and incorporating user-customizable presets with shareable configuration profiles.",
@@ -52,7 +65,7 @@ export const projects = [
     year: 2025
   },
   {
-    id: 4,
+    id: 5,
     title: "SetScrape",
     description: "Full-stack mobile application for easy browsing and downloading of live music from Internet Archive.",
     longDescription: "A mobile platform for discovering and downloading live music from Internet Archive's extensive live music collection. Built with microservices architecture: a browse service with intelligent caching, an aggregation service for grouping uploads by concert, a download manager with live progress tracking, and a main API service handling authentication and orchestration. The backend uses Python FastAPI with SQLite, and the frontend is built in React Native with TypeScript and WebSocket for real-time updates. Development leveraged Claude AI for high-level design decisions and Cursor AI for rapid prototyping. Current features include concert browsing, direct search, and download management. Planned enhancements include Docker containerization, PostgreSQL migration, and native streaming with playback controls.",
@@ -65,7 +78,7 @@ export const projects = [
     year: 2025
   },
   {
-    id: 5,
+    id: 6,
     title: "Locally Imagined",
     description: "A comprehensive e-commerce platform to facilitate local Santa Cruz art sales.",
     longDescription: "This project was developed with a team of 5 students from UC Santa Cruz, in conjunction with a group of local Santa Cruz artists, for UC Santa Cruz’s Intro to Software Development course. Our team employed a Scrum Agile Development methodology to build this website over the course of a quarter. The website was built using React with Material UI for the frontend, Go for the APIs, a PostgreSQL database hosted on Heroku connected to Amazon S3 for image storage. This website supported user creation and profile customization, uploading and managing art listings, and comprehensive browsing functionality with filtering capabilities. My primary responsibilities included developing API endpoints, designing and implementing database schema, and ensuring the different components were designed and synchronized to achieve the high-level goals of the application.",
@@ -78,7 +91,7 @@ export const projects = [
     year: 2023
   },
   {
-    id: 6,
+    id: 7,
     title: "Personal Portfolio Website",
     description: "A website showcasing my professional experience, projects, and technical skills.",
     longDescription: "Built a modern, responsive, single-page comprehensive personal portfolio website using React and Vite for optimal performance. Features include an interactive experience section with sidebar navigation, a project gallery with lightbox functionality, a categorized skills section with color-coded technology chips, and an education timeline. The site utilizes TailwindCSS for modern styling, Lucide React for consistent iconography, and includes smooth animations and responsive design principles. Developed using Claude AI for high-level design andCursor AI for efficient development and implementation.",
