@@ -1,10 +1,10 @@
-# Jake Wilson - Personal Portfolio
+# Jake Warsaw - Personal Portfolio
 
 A modern, responsive personal portfolio website showcasing professional experience, projects, and skills. Built with React and Vite for optimal performance and developer experience.
 
 ## 🚀 Live Demo
 
-[View Live Portfolio](https://your-portfolio-url.com) <!-- Update with your actual deployment URL -->
+[View Live Portfolio](https://jpw-portfolio.vercel.app/)
 
 ## ✨ Features
 
@@ -234,10 +234,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-**Jake Wilson**
-- Email: jake@example.com
-- LinkedIn: [linkedin.com/in/jakewilson](https://linkedin.com/in/jakewilson)
-- GitHub: [github.com/jakewilson](https://github.com/jakewilson)
+**Jake Warsaw**
+- Email: jacobpwarsaw@gmail.com
+- LinkedIn: [linkedin.com/in/jake-warsaw-a0064927](https://www.linkedin.com/in/jake-warsaw-a0064927/)
+- GitHub: [github.com/jp0utside](https://github.com/jp0utside)
 
 ## 🙏 Acknowledgments
 
