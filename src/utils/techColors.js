@@ -103,7 +103,39 @@ export const getTechColor = (tech) => {
   if (techLower.includes('teaching')) {
     return 'from-red-500 to-orange-500'; // Support & Documentation
   }
-  
+
+  // GIS & Geospatial tools
+  if (techLower.includes('esri') || techLower.includes('arcgis') || techLower.includes('rasterio') ||
+      techLower.includes('shapely') || techLower.includes('geojson') || techLower.includes('gis')) {
+    return 'from-teal-500 to-cyan-500';
+  }
+
+  // AI/LLM tools
+  if (techLower.includes('ollama') || techLower.includes('cohere') || techLower.includes('openai') ||
+      techLower.includes('claude api') || techLower.includes('bm25') || techLower.includes('pgvector') ||
+      techLower.includes('rag') || techLower.includes('vector embeddings') || techLower.includes('llm') ||
+      techLower.includes('sse')) {
+    return 'from-indigo-500 to-purple-500';
+  }
+
+  // Mobile frameworks
+  if (techLower.includes('flutter') || techLower.includes('dart') || techLower.includes('swiftui') ||
+      techLower.includes('swiftdata') || techLower.includes('avfoundation') ||
+      techLower.includes('spotify ios sdk') || techLower.includes('spotify web api')) {
+    return 'from-blue-500 to-cyan-500';
+  }
+
+  // Clustering / ML algorithms
+  if (techLower.includes('tf-idf') || techLower.includes('dbscan') || techLower.includes('oauth')) {
+    return 'from-indigo-500 to-purple-500';
+  }
+
+  // Infrastructure
+  if (techLower.includes('redis') || techLower.includes('celery') || techLower.includes('streamlit') ||
+      techLower.includes('vercel')) {
+    return 'from-orange-500 to-red-500';
+  }
+
   // Default color for unmatched technologies
   return 'from-gray-500 to-gray-600';
 };
@@ -187,10 +219,23 @@ export const getTechIcon = (tech) => {
   }
   
   // Mobile category
-  if (techLower.includes('flutter') || techLower.includes('ios') || 
+  if (techLower.includes('flutter') || techLower.includes('ios') ||
       techLower.includes('android') || techLower.includes('react native')) {
     return '📱';
   }
-  
+
+  // GIS & Geospatial
+  if (techLower.includes('esri') || techLower.includes('arcgis') || techLower.includes('rasterio') ||
+      techLower.includes('shapely') || techLower.includes('gis')) {
+    return '🌍';
+  }
+
+  // Mobile frameworks
+  if (techLower.includes('flutter') || techLower.includes('dart') || techLower.includes('swiftui') ||
+      techLower.includes('swiftdata') || techLower.includes('avfoundation') ||
+      techLower.includes('spotify ios sdk') || techLower.includes('spotify web api')) {
+    return '📱';
+  }
+
   return '💻'; // Default icon
 };

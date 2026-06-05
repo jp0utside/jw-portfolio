@@ -17,7 +17,7 @@ const Footer = ({ personalInfo }) => {
           {/* Personal Info */}
           <div className="lg:col-span-2">
             <h3 className="text-xl font-bold mb-3 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              {name || 'Jake Wilson'}
+              {name || 'Jake Warsaw'}
             </h3>
             <p className="text-gray-300 mb-4 leading-relaxed">
               Thank you for visiting my portfolio! Feel free to reach out if you'd like to work together.
@@ -148,7 +148,7 @@ const Footer = ({ personalInfo }) => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 dark:border-gray-700 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} {name || 'Jake Wilson'}. All rights reserved.
+            © {new Date().getFullYear()} {name || 'Jake Warsaw'}. All rights reserved.
           </p>
           
           <button
